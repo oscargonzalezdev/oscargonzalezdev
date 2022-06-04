@@ -1,12 +1,17 @@
-.flewRow{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 .socialLinks a {
-margin-right: 10px;
+margin: 10px;
 }
 
 .avatar{
     border: 2px solid black;
+}
+.infoTitle{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
