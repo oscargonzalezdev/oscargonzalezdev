@@ -23,17 +23,17 @@ export default function ContactForm() {
 
         emailjs.sendForm('service_276giiq', 'template_mxyrjik', form.current, 'JjEdKdtMyFu95MKtK')
             .then((result) => {
-                console.log(result.text);
+                // console.log(result.text);
             }, (error) => {
-                console.log(error.text);
+                // console.log(error.text);
             });
     };
 
     return (
-        <section className='full-width contact-bg'>
+        <section id="contact" className='full-width contact-bg'>
             <form ref={form} onSubmit={sendEmail}>
-            <h1 className='text-center section-title' id="contact">Get in touch</h1>
-            <br />
+                <h1 className='text-center section-title'>Get in touch</h1>
+                <br />
                 <FadeInWhenVisible ><Box className='container box'
                     bg={useColorModeValue('white', 'gray.100')}
                     borderRadius="lg"
