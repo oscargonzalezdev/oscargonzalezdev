@@ -1,19 +1,16 @@
 import Link from "next/link";
-import classes from "./Layout.module.css"
+import Footer from "./Footer"
 export function NavBar() {
     return (
-        <header className={classes.header}>
-        <div className={classes.logo}>Oscar Gonzalez</div>
+        <header className="header">
+        <Link href='/'>{'< OscarGonzalez />'}</Link>
         <nav>
           <ul>
             <li>
-              <Link href='/works'>Works</Link>
+              <Link href='#works'>Works</Link>
             </li>
             <li>
-              <Link href='/blog'>Blog</Link>
-            </li>
-            <li>
-              <Link href='/contact'>Contact</Link>
+              <Link href='#contact'>Contact</Link>
             </li>
           </ul>
         </nav>
@@ -24,7 +21,8 @@ function Layout(props) {
     return(
         <>
         <NavBar />
-        <main className={classes.main}>{props.children}</main>
+        <main>{props.children}</main>
+        <Footer />
         </>
     )
 }
