@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import Link from "next/link";
 
 function About() {
   return (
@@ -32,8 +33,11 @@ function About() {
               </motion.div>
               <br />
               <motion.div initial={{ opacity: 0, y: "100%" }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1.4 }}>
-                <p>I am a freelance and full-stack developer from Ecuador based in Switzerland with a passion for building digital solutions. <br />
-                  I love to keep learning and being able to express myself through code. When I&apos;m not online, I like hanging out with the mountain bike or take some pictures with my camera.
+                <p className="description">I&apos;m a full-stack developer from Spain, originally from Ecuador, based in Switzerland with a passion for Web Development.
+                  I love languages and learning about coding and new technologies. <br />
+                  When I&apos;m not online, I&apos;m biking with friends or exploring my creativity with my camera. <br /><br />
+                  Currently I&apos;m open to new job opportunities as a Front-End or Back-End Developer. <br/>
+                  Feel free to contact me via social channels, <Link href='#contact'>contact form</Link> or <Link href='mailto:oscargonzalezpena@gmail.com'>email</Link>.
                 </p>
               </motion.div>
             </div>

@@ -190,6 +190,12 @@ h3 {
 font-size: 1.3rem;
 }
 
+.description {
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 2rem;
+}
+
 .contact-bg {
   background-image: url('../public/images/contact-bg.jpg');
   background-size: cover;
