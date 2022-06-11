@@ -21,7 +21,7 @@ body {
 }
 
 a {
-  color: #b88e24;
+  color: #b88e24 !important;
   text-decoration: none;
 }
 
