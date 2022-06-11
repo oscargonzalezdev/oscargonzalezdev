@@ -28,7 +28,7 @@ export default function Works() {
         <section id="works" className="full-width works-bg">
             <h1 className="text-center section-title">Last works</h1>
             <div className="flex-row">
-                <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={350} p={5} color='black' >
+                <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={370} p={5} color='black' >
                     <h3>Budget-Manger</h3>
                     <Image
                         borderRadius={5}
@@ -44,7 +44,7 @@ export default function Works() {
                         <a href="https://budget-manager-mern-app.netlify.app/" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><PreviewIcon fontSize="inherit" />&nbsp;Demo </Button></a>
                     </div>
                 </Box></FadeInWhenVisible>
-                <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={350} p={5} color='black' >
+                <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={370} p={5} color='black' >
                     <h3>PetSharing</h3>
                     <Image
                         borderRadius={5}
@@ -59,7 +59,7 @@ export default function Works() {
                         <a href="https://pet-sharing.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><PreviewIcon fontSize="inherit" />&nbsp;Demo </Button></a>
                     </div>
                 </Box></FadeInWhenVisible>
-                <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={350} p={5} color='black' >
+                <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={370} p={5} color='black' >
                     <h3>The Good Diver</h3>
                     <Image
                         borderRadius={5}
