@@ -33,7 +33,7 @@ h1,
 h2,
 h3 {
   font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 h1 {
