@@ -165,7 +165,7 @@ h3 {
 }
 
 .works-bg {
-  background-image: url('../public/images/works-bg.jpg');
+  background-image: url('/images/works-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -197,7 +197,7 @@ font-size: 1.3rem;
 }
 
 .contact-bg {
-  background-image: url('../public/images/contact-bg.jpg');
+  background-image: url('/images/contact-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
