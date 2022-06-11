@@ -37,15 +37,15 @@ h3 {
 }
 
 h1 {
-  font-size: 1.7rem;
+  font-size: 1.7rem !important;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.4rem !important;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
 }
 
 .header {
