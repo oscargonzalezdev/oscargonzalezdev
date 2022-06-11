@@ -8,7 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 html,
@@ -50,7 +50,7 @@ h3 {
 
 .header {
   position: fixed;
-  background-color: #00000080;
+  background-color: #00000090;
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
   font-size: 1.3rem;
@@ -59,7 +59,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   padding: 1% 10%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .header ul {
@@ -85,7 +85,7 @@ h3 {
 .container {
   max-width: 800px;
   margin: auto;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -110,22 +110,13 @@ h3 {
 }
 
 .section-title {
-  width: 20%;
-  height: 3rem;
-  min-width: fit-content;
   text-shadow: 1px 1px 2px #ffffff3e;
   color: #000000;
   margin: 40px auto;
 }
 
-.box h3 {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
 .full-height {
   height: 100vh;
-  scroll-snap-align: center;
 }
 
 .full-width {
@@ -136,6 +127,10 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.contact-form{
+  width: 100%;
 }
 
 .avatar {
@@ -151,18 +146,22 @@ h3 {
   box-shadow: 2px 2px 10px #dddddd80;
   border-radius: 15px;
   color: #000;
-  z-index: 0;
+  z-index: -1;
   padding: 40px;
-  ;
 }
+
+.box h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .social-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .social-links a {
-  margin: 5px 20px;
-
+  margin: 0 20px;
 }
 
 .works-bg {
@@ -172,14 +171,23 @@ h3 {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 .footer-bg {
   height: 100%;
   width: 100%;
   padding: 50px;
+  background-color: #00000080;
   text-align: center;
-  margin: auto;
-  background-color: rgb(15, 15, 15);
-  color: rgb(180, 180, 180);
+  color: #c1c1c1;
+}
+
+.flex-center{
+  justify-content: center;
+  align-items:center;
+}
+
+.emoji-coffee{
+font-size: 1.3rem;
 }
 
 .contact-bg {
