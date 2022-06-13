@@ -35,8 +35,10 @@ export default function Works() {
                         width='100%'
                         src='../images/works/budget-manager.png'
                         alt='Budget-Manger' />
-                    <p>Budget-Manager helps you to track your finances. This MERN application has a Dashboard whit diefferent secctions like Balance, Statatemnts list and Chart, so you have an better overview of your incomes and expenses.</p>
-                    <p>It has CRUD functionality for the Statements Model and use REST API for the comunication between client and server.</p>
+                    <br />
+                    <p>Budget-Manager helps users to track their finances. This MERN application has a Dashboard whit different sections such as Balance, Statements list, and Chart, offering a better overview of incomes and expenses.</p>
+                    <p>It has CRUD functionality for the Statements Model and uses REST API for the communication between client and server.</p>
+                    <br />
                     <aside>Technologies: JavaScript, Express.js, React, MongoDB, Charts.js, Material UI, HTML, CSS</aside>
                     <br />
                     <div className="flex-row">
@@ -51,7 +53,9 @@ export default function Works() {
                         width='100%'
                         src='../images/works/petsharing-demo.png'
                         alt='PetScharing' />
-                    <p>This web application allows you to find pets in your city or share your pet with locals when you need it. It use Express.js for the Back-end and Handelbars for the view rendering. It implement authentication using session storage and use bcrypt for the password encryption. Also offers CRUD functionality for all data base models.</p>
+                    <br />
+                    <p>This web application allows users to find pets close to them or share their pets with other locals. It use Express.js for the Back-end and Handelbars for the Front-End. Also implements authentication using session storage and password encryption using bcrypt package. It has CRUD functionality for all data base models.</p>
+                    <br />
                     <aside>Technologies: JavaScript, Express.js, Handlebars, MongoDB, HTML, CSS </aside>
                     <br />
                     <div className="flex-row">
@@ -66,9 +70,11 @@ export default function Works() {
                         width='100%'
                         src='../images/works/the-good-diver-js-game.png'
                         alt='The Good Diver' />
-                    <p>The Good Diver is a game about cleaning the ocean.
-                        In order to earn points the you must capture ocean trash without being attacked by the sharks.
-                        You can move the diver by using the the arrow keys.</p>
+                    <br />
+                    <p>The Good Diver is a JavaScript game that consists of collecting ocean trash without being attacked by sharks. The diver moves by pressing the arrow keys.
+                        The user earns points each time he collects garbage and loses a percentage of life when he collides with a shark.
+                    </p>
+                    <br />
                     <aside>Technologies: Vanilla JavaScript, HTML, CSS </aside>
                     <br />
                     <div className="flex-row">

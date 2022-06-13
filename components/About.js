@@ -33,11 +33,11 @@ function About() {
               </motion.div>
               <br />
               <motion.div initial={{ opacity: 0, y: "100%" }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1.4 }}>
-                <p className="description">I&apos;m a full-stack developer from Spain, originally from Ecuador, based in Switzerland with a passion for Web Development.
+                <p className="description">I&apos;m a Junior Full-Stack Developer from Spain, originally from Ecuador, based in Switzerland with a passion for Web Development.
                   I love languages and learning about coding and new technologies. <br />
                   When I&apos;m not online, I&apos;m biking with friends or exploring my creativity with my camera. <br /><br />
                   Currently I&apos;m open to new job opportunities as a Front-End or Back-End Developer. <br/>
-                  Feel free to contact me via social channels, <Link href='#contact'>contact form</Link> or <Link href='mailto:oscargonzalezpena@gmail.com'>email</Link>.
+                  Feel free to contact me via <a href="https://www.linkedin.com/in/oscargonzalezdev" target="_blank" rel="noopener noreferrer" >LinkedIn</a>, <Link href='#contact'>contact form</Link> or <Link href='mailto:oscargonzalezpena@gmail.com'>email</Link>.
                 </p>
               </motion.div>
             </div>
