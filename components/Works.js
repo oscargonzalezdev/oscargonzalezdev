@@ -26,7 +26,7 @@ export default function Works() {
 
     return (
         <section id="works" className="full-width works-bg">
-            <h1 className="text-center section-title">Last works</h1>
+            <h1 className="text-center section-title">Latest works</h1>
             <div className="flex-row">
                 <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={370} p={5} color='black' >
                     <h3>Budget-Manger</h3>

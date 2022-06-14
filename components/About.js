@@ -37,7 +37,7 @@ function About() {
                   I love languages and learning about coding and new technologies. <br />
                   When I&apos;m not online, I&apos;m biking with friends or exploring my creativity with my camera. <br /><br />
                   Currently I&apos;m open to new job opportunities as a Front-End or Back-End Developer. <br/>
-                  Feel free to contact me via <a href="https://www.linkedin.com/in/oscargonzalezdev" target="_blank" rel="noopener noreferrer" >LinkedIn</a>, <Link href='#contact'>contact form</Link> or <Link href='mailto:oscargonzalezpena@gmail.com'>email</Link>.
+                  Feel free to contact me via <a href="https://www.linkedin.com/in/oscargonzalezdev" target="_blank" rel="noopener noreferrer" >LinkedIn</a>, <Link href='#contact'>contact form</Link> or <Link href='mailto:oscargonzalezdev@gmail.com'>email</Link>.
                 </p>
               </motion.div>
             </div>
