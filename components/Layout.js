@@ -4,7 +4,7 @@ export function NavBar() {
     return (
         <header className="header">
         <Link href='/'>{'< OscarGonzalez />'}</Link>
-        <nav>
+        <nav className="navbar">
           <ul>
             <li>
               <Link href='#works'>Works</Link>
