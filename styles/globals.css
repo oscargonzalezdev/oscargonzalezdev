@@ -21,12 +21,12 @@ body {
 }
 
 a {
-  color: #b88e24;
+  color: #b88e24 !important;
   text-decoration: none;
 }
 
 a:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 h1,
@@ -62,7 +62,7 @@ h3 {
   z-index: 1;
 }
 .header > a {
-  color: #ccc;
+  color: #ccc !important;
   text-shadow: 1px 1px 10px #b88e24;
   font-size: 1.1em;
 }
