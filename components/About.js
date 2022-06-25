@@ -4,10 +4,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Link from "next/link";
+import ParticlesBackground from '../components/ParticlesBackground'
 
 function About() {
   return (
     <>
+    <ParticlesBackground />
       <section id="about" className="full-width">
         <div className="container">
           <div className='flex-column'>
