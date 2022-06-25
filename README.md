@@ -27,7 +27,7 @@ For this project I use Next.js and the following dependencies:
 It is deployed on Vercel.
 
 ## Demo
-https://www.oscargonzalezdev.com/
+[www.oscargonzalez.dev](https://www.oscargonzalez.dev)
 
 ## Note
 For offers, feedback or comments, feel free to connect via [LinkedIn](https://www.linkedin.com/in/oscargonzalezdev/ "Oscar Gonzalez") or [e-mail](mailto:oscargonzalezdev@gmail.com).
