@@ -1,29 +1,35 @@
 import Link from "next/link";
 import Footer from "./Footer"
+
 export function NavBar() {
-    return (
-        <header className="header">
-        <Link href='/'>{'< OscarGonzalez />'}</Link>
-        <nav className="navbar">
-          <ul>
-            <li>
-              <Link href='#works'>Works</Link>
-            </li>
-            <li>
-              <Link href='#contact'>Contact</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    )
+  return (
+    <section className="header-box">
+    <header className="header">
+      <span id="logo"><Link href='/'>{'< OG />'}</Link></span>
+      <nav>
+        <ul className="flex-row">
+          <li>
+            <Link href='/blog'>Blog</Link>
+          </li>
+          <li>
+            <Link href='/works'>Works</Link>
+          </li>
+          <li id="contact">
+            <Link href='/contact'>Contact</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    </section>
+  )
 }
 function Layout(props) {
-    return(
-        <>
-        <NavBar />
-        <main>{props.children}</main>
-        <Footer />
-        </>
-    )
+  return (
+    <div className="main-container">
+      <NavBar />
+      <main>{props.children}</main>
+      <Footer />
+    </div>
+  )
 }
 export default Layout;
