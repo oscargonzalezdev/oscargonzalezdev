@@ -91,7 +91,7 @@ body h3 {
 
 .bg-about {
   padding-top: 50px;
-  background-image:url('../public/images/bg/bg-wave.png');
+  background-image:url('../images/bg/bg-wave.png');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
