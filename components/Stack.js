@@ -14,10 +14,10 @@ function Stack() {
                         viewport={{ once: true }}
                         transition={{ duration: 2 }}
                         variants={{
-                            visible: { opacity: 1, y: -20, x: '40%', scale: 1 },
-                            hidden: { opacity: 0, y: 200, x: '30%', scale: 1 }
+                            visible: { opacity: 1, y: -10, x: 0, scale: 1 },
+                            hidden: { opacity: 0, y: 200, x: -100, scale: 1 }
                         }}>
-                        <Image height='250px' borderRadius='2xl' src="../images/rocket-3d.png" alt="My stack" />
+                        <Image height='250px' src="../images/rocket-3d.png" alt="My stack" />
                     </motion.div>
                 </div>
                 <div className="section-stack">

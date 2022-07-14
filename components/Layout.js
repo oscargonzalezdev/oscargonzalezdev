@@ -3,7 +3,6 @@ import Footer from "./Footer"
 
 export function NavBar() {
   return (
-    <section className="header-box">
     <header className="header">
       <span id="logo"><Link href='/'>{'< OG />'}</Link></span>
       <nav>
@@ -17,7 +16,6 @@ export function NavBar() {
         </ul>
       </nav>
     </header>
-    </section>
   )
 }
 function Layout(props) {

@@ -25,16 +25,17 @@ function About() {
               />
               <br />
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: "100%" }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1.4 }}>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ease: "easeOut", duration: 3 }}>
               <span className='social-links'>
                 <a href="https://github.com/oscargonzalezdev" target="_blank" rel="noopener noreferrer" ><GitHubIcon /></a>
                 <a href="https://www.linkedin.com/in/oscargonzalezdev" target="_blank" rel="noopener noreferrer" ><LinkedInIcon /></a>
                 <a href="https://twitter.com/oscardev_" target="_blank" rel="noopener noreferrer" ><TwitterIcon /></a>
               </span>
+              <br />
             </motion.div>
           </div>
           <div className="about-info">
-            <motion.div className="about-title" initial={{ opacity: 0, x: "100%" }} animate={{ opacity: 1, x: 0 }} transition={{ ease: "easeOut", duration: 1.4 }}>
+            <motion.div className="about-title" initial={{ opacity: 0, y: "100%" }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1.4 }}>
               <div className="box">
                 <h2><span className="emoji-hello">👋</span> Hello World!</h2>
                 <br />
