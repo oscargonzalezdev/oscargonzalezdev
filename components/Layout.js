@@ -9,13 +9,10 @@ export function NavBar() {
       <nav>
         <ul className="flex-row">
           <li>
-            <Link href='/blog'>Blog</Link>
+            <Link href='#works'>Works</Link>
           </li>
           <li>
-            <Link href='/works'>Works</Link>
-          </li>
-          <li id="contact">
-            <Link href='/contact'>Contact</Link>
+            <Link href='#contact'>Contact</Link>
           </li>
         </ul>
       </nav>
