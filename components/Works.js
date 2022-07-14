@@ -25,8 +25,8 @@ export function FadeInWhenVisible({ children }) {
 export default function Works() {
 
     return (
-        <section id="works" className="full-width works-bg">
-            <h1 className="text-center section-title">Latest works</h1>
+        <section id="works" className="full-width bg-container">
+            <h1 className="section-title">Latest works</h1>
             <div className="flex-row">
                 <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={370} p={5} color='black' >
                     <h3>Budget-Manger</h3>
@@ -42,7 +42,7 @@ export default function Works() {
                     <aside>Technologies: JavaScript, Express.js, React, MongoDB, Charts.js, Material UI, HTML, CSS</aside>
                     <br />
                     <div className="flex-row">
-                        <a href="https://github.com/FreiburgDevTeam/mern-application-client" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><GitHubIcon fontSize="inherit" />&nbsp;Source </Button></a>
+                        <a href="https://github.com/FreiburgDevTeam/mern-application-client" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><GitHubIcon fontSize="inherit" />&nbsp;Code </Button></a>
                         <a href="https://budget-manager-mern-app.netlify.app/" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><PreviewIcon fontSize="inherit" />&nbsp;Demo </Button></a>
                     </div>
                 </Box></FadeInWhenVisible>
@@ -59,7 +59,7 @@ export default function Works() {
                     <aside>Technologies: JavaScript, Express.js, Handlebars, MongoDB, HTML, CSS </aside>
                     <br />
                     <div className="flex-row">
-                        <a href="https://github.com/FreiburgDevTeam/crud-project" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><GitHubIcon fontSize="inherit" />&nbsp;Source </Button></a>
+                        <a href="https://github.com/FreiburgDevTeam/crud-project" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><GitHubIcon fontSize="inherit" />&nbsp;Code </Button></a>
                         <a href="https://pet-sharing.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><PreviewIcon fontSize="inherit" />&nbsp;Demo </Button></a>
                     </div>
                 </Box></FadeInWhenVisible>
@@ -78,7 +78,7 @@ export default function Works() {
                     <aside>Technologies: Vanilla JavaScript, HTML, CSS </aside>
                     <br />
                     <div className="flex-row">
-                        <a href="https://github.com/oscargonzalezdev/project-game" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><GitHubIcon fontSize="inherit" />&nbsp;Source </Button></a>
+                        <a href="https://github.com/oscargonzalezdev/project-game" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><GitHubIcon fontSize="inherit" />&nbsp;Code </Button></a>
                         <a href="https://oscargonzalezdev.github.io/project-game" target="_blank" rel="noopener noreferrer"><Button color='black' variant='outline'><PreviewIcon fontSize="inherit" />&nbsp;Demo </Button></a>
                     </div>
                 </Box></FadeInWhenVisible>

@@ -14,16 +14,18 @@ export default function ParticlesBackground() {
   return (
     <Particles
       id="tsparticles"
+      className="particles"
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
         background: {
-          color: "#000",
+          color: "#EFEFEF",
           position: "center",
           repeat: "no-repeat",
         },
         fullScreen: {
-          zIndex: 0
+          enable: true,
+          zIndex: -1
         },
         fpsLimit: 120,
         interactivity: {
@@ -40,24 +42,24 @@ export default function ParticlesBackground() {
           },
           modes: {
             push: {
-              quantity: 1,
+              quantity: 0,
             },
             repulse: {
-              distance: 70,
+              distance: 20,
               duration: 0.1,
             },
           },
         },
         particles: {
           color: {
-            value: "#cccccc",
+            value: "#fff",
           },
           links: {
-            color: "#cccccc",
-            distance: 200,
+            color: "#bebebe",
+            distance: 250,
             enable: true,
-            opacity: 0.5,
-            width: 1.5,
+            opacity: 0.6,
+            width: 2,
           },
           collisions: {
             enable: true,
@@ -70,23 +72,23 @@ export default function ParticlesBackground() {
             },
             random: false,
             speed: 0.3,
-            straight: false,
+            straight: true,
           },
           number: {
             density: {
               enable: true,
-              area: 600,
+              area: 1000,
             },
             value: 90,
           },
           opacity: {
-            value: 0.5,
+            value: 0.7,
           },
           shape: {
-            type: "circle",
+            type: "square",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 10 },
           },
         },
         detectRetina: true,
