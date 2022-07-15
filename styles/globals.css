@@ -43,10 +43,6 @@ body h3 {
   font-size: 1em;
 }
 
-.align-center {
-  width: 80%;
-  margin: 40px auto 0 auto;
-}
 .section-stack {
   width: 40%;
   display: flex;
@@ -62,7 +58,7 @@ body h3 {
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
   font-size: 1rem;
-  width: calc(100vw - 20%);
+  width: 80vw;
   display: flex;
   align-items:baseline;
   justify-content: space-around;
@@ -118,6 +114,16 @@ body h3 {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.flex-space-between {
+  width: 100%;
+  justify-content:space-between;
+}
+.flex-space-between div {
+  width: 48%;
+}
+.flex-space-between div input{
+  width:100%;
+}
 
 .flex-column {
   width: 100%;
@@ -164,7 +170,7 @@ body h3 {
 }
 
 .contact-form {
-  width: 80%;
+  width: 70%;
 }
 
 .avatar {
@@ -294,5 +300,8 @@ height: 100vh;
   .madeby {
     display: block;
     text-align: center;
+  }
+  .flex-space-between div {
+    width: 100%;
   }
 }

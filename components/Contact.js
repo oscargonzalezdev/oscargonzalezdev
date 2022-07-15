@@ -55,7 +55,7 @@ export default function ContactForm() {
     };
 
     return (
-        <section id="contact" className='full-width contact-bg'>
+        <section id="contact" className='full-width'>
             <ToastContainer position="bottom-right" />
             <div className='flex-column'>
                 <form className='contact-form' ref={form} onSubmit={sendEmail}>
@@ -64,20 +64,18 @@ export default function ContactForm() {
                     <FadeInWhenVisible >
                         <Box className='box'>
                             <VStack spacing={5}>
-                                <FormControl isRequired>
-                                    <FormLabel>Name</FormLabel>
-                                    <InputGroup>
-                                        <Input type="text" name="user_name" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
-                                    </InputGroup>
-                                </FormControl>
+                                <div className='flex-row flex-space-between'>
 
-                                <FormControl isRequired>
-                                    <FormLabel>Email</FormLabel>
-                                    <InputGroup>
-                                        <Input type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                                    </InputGroup>
-                                </FormControl>
+                                    <div>
+                                        <FormLabel>Name</FormLabel>
+                                        <Input isRequired type="text" name="user_name" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
+                                    </div>
+                                    <div>
 
+                                        <FormLabel>Email</FormLabel>
+                                        <Input isRequired type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                    </div>
+                                </div>
                                 <FormControl isRequired>
                                     <FormLabel>Message</FormLabel>
                                     <Textarea name="message" placeholder="Your Message" rows={9} resize="none" value={message} onChange={(e) => setMessage(e.target.value)} />
