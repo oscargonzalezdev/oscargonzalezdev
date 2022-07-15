@@ -29,7 +29,8 @@ export default function Works() {
             <h1 className="section-title">Latest works</h1>
             <div className="flex-row">
                 <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={370} p={5} color='black' >
-                    <h3>Budget-Manger</h3>
+                <h1 className="text-center"><strong>Budget Manager</strong></h1>
+                    <br />
                     <Image
                         borderRadius={5}
                         width='100%'
@@ -47,7 +48,8 @@ export default function Works() {
                     </div>
                 </Box></FadeInWhenVisible>
                 <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={370} p={5} color='black' >
-                    <h3>PetSharing</h3>
+                    <h1 className="text-center"><strong>Pet Sharing</strong></h1>
+                    <br />
                     <Image
                         borderRadius={5}
                         width='100%'
@@ -64,7 +66,8 @@ export default function Works() {
                     </div>
                 </Box></FadeInWhenVisible>
                 <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={370} p={5} color='black' >
-                    <h3>The Good Diver</h3>
+                <h1 className="text-center"><strong>The Good Diver</strong></h1>
+                    <br />
                     <Image
                         borderRadius={5}
                         width='100%'
