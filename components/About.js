@@ -9,9 +9,9 @@ import ParticlesBackground from "./ParticlesBackground";
 
 function About() {
   return (
-    <div className="bg-about full-width">
+    <section id="about">
+    <div className="full-width">
       <ParticlesBackground />
-      <section id="about">
         <div className="flex-row">
           <div>
             <motion.div initial={{ opacity: 0, y: "-100%" }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ ease: "easeOut", duration: 1.4 }}>
@@ -24,8 +24,6 @@ function About() {
                 title="Oscar Gonzalez - Web Developer"
               />
               <br />
-            </motion.div>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ease: "easeOut", duration: 3 }}>
               <span className='social-links'>
                 <a href="https://github.com/oscargonzalezdev" target="_blank" rel="noopener noreferrer" ><GitHubIcon /></a>
                 <a href="https://www.linkedin.com/in/oscargonzalezdev" target="_blank" rel="noopener noreferrer" ><LinkedInIcon /></a>
@@ -34,10 +32,16 @@ function About() {
               <br />
             </motion.div>
           </div>
+
           <div className="about-info">
-            <motion.div className="about-title" initial={{ opacity: 0, y: "100%" }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1.4 }}>
+            <motion.div className="about-title" initial={{ opacity: 0, y: "100%" }} animate={{ opacity: 1, y: 0 }} transition={{ ease: "easeOut", duration: 1 }}>
               <div className="box">
-                <h2><span className="emoji-hello">👋</span> Hello World!</h2>
+                <div className="flex-row emoji-hello">
+                  <h1>Hello World!&nbsp;&nbsp;</h1>
+                  <motion.div initial={{ x: 0, rotateZ: 0 }} animate={{ x: 30, rotateZ: 40 }} transition={{ duration: 0.3, repeat: 5, repeatType: "reverse", delay: 2 }}>
+                    <h1>👋</h1>
+                  </motion.div>
+                </div>
                 <br />
                 <h1>I&apos;m Oscar, a freelance <strong>Web Developer</strong> based in Switzerland, passionate about coding and web technologies.</h1>
                 <br />
@@ -51,8 +55,9 @@ function About() {
           </div>
         </div>
         <br />
-      </section>
+      
     </div>
+    </section>
   )
 }
 export default About;
