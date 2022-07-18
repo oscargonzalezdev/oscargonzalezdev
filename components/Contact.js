@@ -59,25 +59,23 @@ export default function ContactForm() {
             <ToastContainer position="bottom-right" />
             <div className='flex-column'>
                 <form className='contact-form' ref={form} onSubmit={sendEmail}>
-                    <h1 className='section-title'>Get in touch</h1>
-                    <br />
+                    <h1 className='text-center section-title'>Get in touch<hr /></h1>
                     <FadeInWhenVisible >
                         <Box className='box'>
                             <VStack spacing={5}>
                                 <div className='flex-row flex-space-between'>
-
                                     <div>
-                                        <FormLabel>Name</FormLabel>
-                                        <Input isRequired type="text" name="user_name" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
+                                    <FormControl isRequired><FormLabel>Name</FormLabel></FormControl>
+                                        <Input type="text" name="user_name" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
+                                        
                                     </div>
                                     <div>
-
-                                        <FormLabel>Email</FormLabel>
-                                        <Input isRequired type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                    <FormControl isRequired><FormLabel>Email</FormLabel></FormControl>
+                                        <Input type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                     </div>
                                 </div>
                                 <FormControl isRequired>
-                                    <FormLabel>Message</FormLabel>
+                                    <FormLabel >Message</FormLabel>
                                     <Textarea name="message" placeholder="Your Message" rows={9} resize="none" value={message} onChange={(e) => setMessage(e.target.value)} />
                                 </FormControl>
                                 <Button

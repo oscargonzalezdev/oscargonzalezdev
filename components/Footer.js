@@ -17,10 +17,8 @@ function Footer() {
                 </div>
                 <div>
                     <Link href='/blog'>Blog</Link><br />
-                    <Link href='/works'>Works</Link><br />
-                    <Link href='/contact'>Contact</Link><br />
-                    <br />
-                    <br />
+                    <Link href='/#works'>Works</Link><br />
+                    <Link href='/#contact'>Contact</Link><br />
                 </div>
             </div>
             <div className='flex-row flex-center madeby'>

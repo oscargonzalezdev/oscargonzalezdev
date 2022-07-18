@@ -4,8 +4,7 @@ import { motion } from 'framer-motion'
 function Stack() {
     return (
         <section id="stack" className="full-width">
-            <h3 className="text-center section-title">My Stack</h3>
-            <br />
+            <h3 className="text-center section-title">My Stack <hr /></h3>
             <div className="flex-row">
                 <div className="rocket" >
                     <motion.div

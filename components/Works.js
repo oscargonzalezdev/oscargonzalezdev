@@ -25,8 +25,8 @@ export function FadeInWhenVisible({ children }) {
 export default function Works() {
 
     return (
-        <section id="works" className="full-width bg-container">
-            <h1 className="section-title">Latest works</h1>
+        <section id="works" className="full-width">
+            <h1 className="text-center section-title">Latest works<hr /></h1>
             <div className="flex-row">
                 <FadeInWhenVisible><Box className="box" maxW='sm' borderRadius={15} m={2} w={370} p={5} color='black' >
                 <h1 className="text-center"><strong>Budget Manager</strong></h1>
