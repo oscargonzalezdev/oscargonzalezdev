@@ -7,11 +7,14 @@ export function NavBar() {
       <span id="logo"><Link href='/'>{'< OG />'}</Link></span>
       <nav>
         <ul className="flex-row">
-          <li>
-            <Link href='#works'>Works</Link>
+        <li>
+            <Link href='/blog'>Blog</Link>
           </li>
           <li>
-            <Link href='#contact'>Contact</Link>
+            <Link href='/#works'>Works</Link>
+          </li>
+          <li>
+            <Link href='/#contact'>Contact</Link>
           </li>
         </ul>
       </nav>
