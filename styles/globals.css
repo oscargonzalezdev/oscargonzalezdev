@@ -276,6 +276,10 @@ height: 100vh;
 .author {
 font-size: 1rem;
 }
+.bold-title{
+  font-weight: bold;
+  color: red;
+}
 
 @media screen and (max-width: 570px) {
   .header {
@@ -319,5 +323,8 @@ font-size: 1rem;
   }
   .flex-left, .flex-right {
    max-width: 90%;
+  }
+  .bg-container {
+    padding: 20px;
   }
 }
