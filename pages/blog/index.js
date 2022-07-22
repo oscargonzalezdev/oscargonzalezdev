@@ -2,6 +2,8 @@ import { createClient } from 'contentful'
 import PostCard from '../../components/PostCard'
 import styles from '../../styles/Blog.module.css'
 import { useState } from 'react'
+import { SearchIcon } from '@chakra-ui/icons';
+import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 
 export async function getStaticProps() {
     const client = createClient({
@@ -38,6 +40,20 @@ function Blog({ post }) {
         <section id='blog' className="full-width bg-container">
             <div className={styles.headerBlog}>
                 <h1>Oscar&apos;s Blog</h1>
+                <div className={styles.searchBar}>
+                    <InputGroup >
+                        <InputLeftElement pointerEvents='none'>
+                            <SearchIcon color='gray.400' />
+                        </InputLeftElement>
+                        <Input
+                            type="text"
+                            value={filteredPost}
+                            placeholder='Search blog posts...'
+                            onChange={handleSearch}
+                            size='md'
+                        />
+                    </InputGroup>
+                </div>
             </div>
             <hr />
             <div className={styles.post_list}>
