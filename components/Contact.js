@@ -4,10 +4,8 @@ import {
     FormControl,
     FormLabel,
     Input,
-    InputGroup,
     Textarea,
     useClipboard,
-    useColorModeValue,
     VStack,
 } from '@chakra-ui/react';
 import { FadeInWhenVisible } from './Works';
@@ -18,6 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactForm() {
 
+    console.log( process.env.EMAILJS_SERVICE_ID)
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -25,6 +24,7 @@ export default function ContactForm() {
     const { hasCopied, onCopy } = useClipboard('example@example.com');
     const form = useRef();
 
+    // allow notifications using toastify
     const notify = () => {
         toast.success('Message sent successfully!', {
             position: "bottom-right",
@@ -37,10 +37,15 @@ export default function ContactForm() {
         });
     }
 
+    // set up EmailJS services
     const sendEmail = (e) => {
         e.preventDefault();
         toast.promise(
-            emailjs.sendForm('service_276giiq', 'template_mxyrjik', form.current, 'JjEdKdtMyFu95MKtK'),
+            emailjs.sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                form.current,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY),
             {
                 pending: 'Sending...',
                 success: 'Message sent successfully!',
@@ -67,7 +72,6 @@ export default function ContactForm() {
                                     <div>
                                     <FormControl isRequired><FormLabel>Name</FormLabel></FormControl>
                                         <Input type="text" name="user_name" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
-                                        
                                     </div>
                                     <div>
                                     <FormControl isRequired><FormLabel>Email</FormLabel></FormControl>
