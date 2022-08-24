@@ -8,24 +8,25 @@ export function NavBar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
   return (
-<header>
+    <header>
       <nav className="site-navbar">
-      <Link href='/'>{'<OG/>'}</Link>
+        <Link href='/'><span id="logo">&nbsp;</span></Link>
         <ul className={click ? "nav-options active" : "nav-options"}>
           <li onClick={closeMobileMenu}><Link href='/blog'>Blog</Link></li>
           <li onClick={closeMobileMenu}><Link href='/#works'>Works</Link></li>
           <li onClick={closeMobileMenu}><Link href='/#contact'>Contact</Link></li>
         </ul>
         <div className="mobile-menu" onClick={handleClick}>
-        {click ? (
-          <CloseIcon className="menu-icon" />
-        ) : (
-          <MenuIcon className="menu-icon" />
-        )}
-      </div>
+          {click ? (
+            <CloseIcon className="menu-icon" />
+          ) : (
+            <MenuIcon className="menu-icon" />
+          )}
+        </div>
       </nav>
-</header>
+    </header>
   )
 }
 function Layout(props) {
@@ -33,7 +34,7 @@ function Layout(props) {
     <div>
       <NavBar />
       <div className="main-container">
-      <main>{props.children}</main>
+        <main>{props.children}</main>
       </div>
       <Footer />
     </div>
