@@ -1,38 +1,39 @@
-import { createClient } from 'contentful'
-import PostCard from '../../components/PostCard'
+import PostCard from '../../components/Cards/PostCard'
 import styles from '../../styles/Blog.module.css'
 import { useState } from 'react'
 import { SearchIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
+import axios from 'axios';
+
+const blogEndPoint = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/articles?populate=*'
 
 export async function getStaticProps() {
-    const client = createClient({
-        space: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    const postsFromServer = await axios.get(blogEndPoint)
+    const selectedPosts = await postsFromServer.data.data.map(post => {
+        return post.attributes
     })
-    const res = await client.getEntries({ content_type: 'post' })
     return {
         props: {
-            post: res.items
-        },
-        revalidate: 1
+            posts: selectedPosts
+        }
     }
 }
 
-function Blog({ post }) {
+function Blog({ posts }) {
     const [filteredPost, setFilteredPost] = useState("")
+
     const handleSearch = (e) => {
         const lowerCase = e.target.value.toLowerCase();
         setFilteredPost(lowerCase)
     }
-    const result = post.filter(item => {
+    const postsList = posts.filter(item => {
         //if no input the return the original
         if (filteredPost === '') {
             return item;
         }
         //return the item which contains the user input
         else {
-            return item.fields.title.toLowerCase().includes(filteredPost)
+            return item.title.toLowerCase().includes(filteredPost)
         }
     })
 
@@ -56,9 +57,16 @@ function Blog({ post }) {
                 </div>
             </div>
             <hr />
-            <div className={styles.post_list}>
-                {result.map(item => (
-                    <PostCard key={item.sys.id} data={item.fields} />
+            <div className='flex-column'>
+                {postsList.map((item, index) => (
+                    <PostCard
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        slug={item.slug}
+                        imageURL={item.image.data.attributes.url}
+                        category={item.category.data.attributes.name}
+                    />
                 ))}
             </div>
         </section>
