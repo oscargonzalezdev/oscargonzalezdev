@@ -182,7 +182,7 @@ padding-top: 90px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 40px 0;
+  gap: 10px;
 }
 
 .flex-space-between {
@@ -224,6 +224,7 @@ padding-top: 90px;
   justify-content: left;
   align-items: center;
 }
+
 .align-center {
   margin: auto;
 }
@@ -335,6 +336,7 @@ font-size: 1rem;
 .mobile-menu {
   display: none;
 }
+
 /* MOBILE VIEW */
 @media screen and (max-width: 650px) {
   
