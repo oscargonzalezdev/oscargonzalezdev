@@ -48,7 +48,7 @@ function About() {
                 <h2>I enjoy helping people, startups and companies build digital solutions that make our lives a little better.</h2>
                 <br />
                 <div className="about-buttons">
-                  <Link href='#stack'><Button><KeyboardDoubleArrowDownIcon />&nbsp; Find out more</Button></Link>
+                  <Link href='#stack'><Button variant='none'><KeyboardDoubleArrowDownIcon />&nbsp; Find out more</Button></Link>
                 </div>
               </div>
             </motion.div>
