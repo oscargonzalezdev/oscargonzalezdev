@@ -8,7 +8,7 @@ import {
     useClipboard,
     VStack,
 } from '@chakra-ui/react';
-import { FadeInWhenVisible } from './Works';
+import { FadeInWhenVisible } from './LatestWorks';
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
@@ -70,21 +70,20 @@ export default function ContactForm() {
                                 <div className='flex-row flex-space-between'>
                                     <div>
                                     <FormControl isRequired><FormLabel>Name</FormLabel></FormControl>
-                                        <Input type="text" name="user_name" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
+                                        <Input required type="text" name="user_name" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
                                     </div>
                                     <div>
                                     <FormControl isRequired><FormLabel>Email</FormLabel></FormControl>
-                                        <Input type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                        <Input required type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                     </div>
                                 </div>
                                 <FormControl isRequired>
                                     <FormLabel >Message</FormLabel>
-                                    <Textarea name="message" placeholder="Your Message" rows={9} resize="none" value={message} onChange={(e) => setMessage(e.target.value)} />
+                                    <Textarea required name="message" placeholder="Your Message" rows={9} resize="none" value={message} onChange={(e) => setMessage(e.target.value)} />
                                 </FormControl>
                                 <Button
                                     type="submit"
-                                    color='black'
-                                    variant='outline'
+                                    variant='none'
                                 >
                                     Send Message
                                 </Button>
