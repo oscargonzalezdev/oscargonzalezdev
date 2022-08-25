@@ -1,34 +1,24 @@
-import { Image, IconButton } from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
 import styles from '../../styles/Blog.module.css'
 import moment from 'moment'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import { CopyIcon } from '@chakra-ui/icons'
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { useState } from 'react'
-import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios'
 import ReactMarkdown from 'react-markdown'
+import { fetchPosts } from '../../utils/fetch-data';
 
-const blogEndPoint = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/articles'
-
+// render data from server as static content
 export async function getStaticProps({ params }) {
-    const postsFromServer = await axios.get(blogEndPoint + '?populate=*')
-    const selectedPost = await postsFromServer.data.data.filter(post => {
+    const posts = await fetchPosts()
+    const selectedPost = await posts.data.filter(post => {
         return post.attributes.slug === params.slug
     })
-
     return {
-        props: {
-            post: selectedPost[0]
-        }
+        props: { post: selectedPost }
     }
 }
 
+// conver slugs in static paths
 export async function getStaticPaths() {
-    const postsFromServer = await axios.get(blogEndPoint)
-
-    const paths = postsFromServer.data.data.map(item => {
+    const postsFromServer = await fetchPosts()
+    const paths = await postsFromServer.data.map(item => {
         return {
             params: { slug: item.attributes.slug }
         }
@@ -39,9 +29,8 @@ export async function getStaticPaths() {
     }
 }
 
-
 function PostDetails({ post }) {
-    const { title, content, image, createdAt } = post.attributes
+    const { title, content, image, createdAt } = post[0].attributes
     const date = moment(createdAt).format("MMM Do YY");
     const imgURL = image.data.attributes.url;
 

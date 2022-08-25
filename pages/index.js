@@ -4,35 +4,24 @@ import LatestWorks from '../components/LatestWorks';
 import Contact from '../components/Contact';
 import Stack from '../components/Stack'
 import LatestPosts from '../components/LatestPosts';
+import { fetchPosts, fetchWorks } from '../utils/fetch-data';
 
-const blogEndPoint = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/articles?populate=*'
-const workEndPoint = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/works?populate=*'
-
-// set content from server as static content
+// render data from server as static content
 export async function getStaticProps() {
-    // fetch blog posts from server
-    const postsFromServer = await fetch(blogEndPoint)
-    const posts = await postsFromServer.json()
-
-    // fetch works from server
-    const worksFromServer = await fetch(workEndPoint)
-    const works = await worksFromServer.json()
-
+  const posts = await fetchPosts()
+  const works = await fetchWorks()
     return {
-      props: {
-        posts,
-        works
-      }
+      props: { posts, works }
     }
 }
 
 export default function Home({ posts, works }) {
 
-  const selectedPosts = posts?.data.map(post => {
+  const selectedPosts = posts.data.map(post => {
     return post.attributes
   })
 
-  const selectedWorks = works?.data.map(works => {
+  const selectedWorks = works.data.map(works => {
     return works.attributes
   })
 

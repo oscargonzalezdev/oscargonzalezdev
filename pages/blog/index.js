@@ -3,30 +3,28 @@ import styles from '../../styles/Blog.module.css'
 import { useState } from 'react'
 import { SearchIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
-import axios from 'axios';
+import { fetchPosts } from '../../utils/fetch-data';
 
-const blogEndPoint = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/articles?populate=*'
-
+// render data from server as static content
 export async function getStaticProps() {
-    const postsFromServer = await axios.get(blogEndPoint)
-    const selectedPosts = await postsFromServer.data.data.map(post => {
-        return post.attributes
-    })
+  const posts = await fetchPosts()
     return {
-        props: {
-            posts: selectedPosts
-        }
+      props: { posts }
     }
 }
 
 function Blog({ posts }) {
+    const selectedPosts = posts.data.map(post => {
+        return post.attributes
+      })
+
     const [filteredPost, setFilteredPost] = useState("")
 
     const handleSearch = (e) => {
         const lowerCase = e.target.value.toLowerCase();
         setFilteredPost(lowerCase)
     }
-    const postsList = posts.filter(item => {
+    const postsList = selectedPosts.filter(item => {
         //if no input the return the original
         if (filteredPost === '') {
             return item;
