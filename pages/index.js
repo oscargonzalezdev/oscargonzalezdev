@@ -4,33 +4,38 @@ import LatestWorks from '../components/LatestWorks';
 import Contact from '../components/Contact';
 import Stack from '../components/Stack'
 import LatestPosts from '../components/LatestPosts';
-import axios from 'axios';
 
 const blogEndPoint = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/articles?populate=*'
 const workEndPoint = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/works?populate=*'
 
+// set content from server as static content
 export async function getStaticProps() {
-  // fetch blog posts and set as static
-  const postsFromServer = await axios.get(blogEndPoint)
-  const selectedPosts = await postsFromServer.data.data.map(post => {
-    return post.attributes
-  })
+    // fetch blog posts from server
+    const postsFromServer = await fetch(blogEndPoint)
+    const posts = await postsFromServer.json()
 
-  // fetch works and set as static
-  const worksFromServer = await axios.get(workEndPoint)
-  const selectedWorks = await worksFromServer.data.data.map(post => {
-    return post.attributes
-  })
+    // fetch works from server
+    const worksFromServer = await fetch(workEndPoint)
+    const works = await worksFromServer.json()
 
-  return {
-    props: {
-      posts: [...selectedPosts].slice(0, 4),
-      works: [...selectedWorks].slice(0, 4)
+    return {
+      props: {
+        posts,
+        works
+      }
     }
-  }
 }
 
 export default function Home({ posts, works }) {
+
+  const selectedPosts = posts?.data.map(post => {
+    return post.attributes
+  })
+
+  const selectedWorks = works?.data.map(works => {
+    return works.attributes
+  })
+
   return (
     <div>
       <Head>
@@ -41,8 +46,8 @@ export default function Home({ posts, works }) {
       <About />
       <div className='bg-container'>
         <Stack />
-        <LatestWorks data={works} />
-        <LatestPosts data={posts} />
+        <LatestWorks data={selectedWorks} />
+        <LatestPosts data={selectedPosts} />
         <Contact />
       </div>
     </div>
