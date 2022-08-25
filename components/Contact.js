@@ -5,7 +5,6 @@ import {
     FormLabel,
     Input,
     Textarea,
-    useClipboard,
     VStack,
 } from '@chakra-ui/react';
 import { FadeInWhenVisible } from './LatestWorks';
@@ -14,13 +13,12 @@ import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function ContactForm() {
+export default function Contact () {
     
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    const { hasCopied, onCopy } = useClipboard('example@example.com');
     const form = useRef();
 
     // allow notifications using toastify
