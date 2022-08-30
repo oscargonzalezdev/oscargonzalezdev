@@ -1,19 +1,9 @@
 import { Image } from '@chakra-ui/react'
 import styles from '../../styles/Blog.module.css'
 import moment from 'moment'
+import { fetchPosts } from '../../utils/fetch-data'
 import ReactMarkdown from 'react-markdown'
-import { fetchPosts } from '../../utils/fetch-data';
-
-// render data from server as static content
-export async function getStaticProps({ params }) {
-    const posts = await fetchPosts()
-    const selectedPost = await posts.data.filter(post => {
-        return post.attributes.slug === params.slug
-    })
-    return {
-        props: { post: selectedPost }
-    }
-}
+import { useEffect } from 'react'
 
 // conver slugs in static paths
 export async function getStaticPaths() {
@@ -29,8 +19,48 @@ export async function getStaticPaths() {
     }
 }
 
+// render data from server as static content
+export async function getStaticProps({ params }) {
+    const posts = await fetchPosts()
+    const selectedPost = await posts.data.filter(post => {
+        return post.attributes.slug === params.slug
+    })
+    return {
+        props: { post: selectedPost[0] }
+    }
+}
+
 function PostDetails({ post }) {
-    const { title, content, image, createdAt } = post[0].attributes
+
+    function copyCode(item, index) {
+        const selectedButton = document.getElementById('btn'+index)
+        selectedButton.innerText = 'Copied!'
+        const editedCode = item.innerText.slice(0, -4)
+        navigator.clipboard.writeText(editedCode)
+        setTimeout(() => {
+            selectedButton.innerText = 'Copy'
+        }, 3000)
+    }
+
+    const renderCopyButton = () => {
+        const preTags = document.querySelectorAll('pre')
+        preTags.forEach((item, index) => {
+            const copyButton = document.createElement('button')
+            copyButton.innerHTML = 'Copy'
+            copyButton.className = styles.copyButton
+            copyButton.id = 'btn' + index
+            copyButton.addEventListener("click", () => {
+                copyCode(item, index)
+            })
+            item.prepend(copyButton)
+        })
+    }
+
+    useEffect(() => {
+        renderCopyButton()
+    }, [])
+
+    const { title, content, image, createdAt } = post.attributes
     const date = moment(createdAt).format("MMM Do YY");
     const imgURL = image.data.attributes.url;
 
@@ -65,7 +95,7 @@ function PostDetails({ post }) {
             </div>
             <br />
             <article>
-                <ReactMarkdown>{content}</ReactMarkdown>
+                <ReactMarkdown className={styles.postContent}>{content}</ReactMarkdown>
             </article>
         </div>
     )
