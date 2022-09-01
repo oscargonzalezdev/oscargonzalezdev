@@ -1,33 +1,31 @@
-# Oscar Gonzalez's Portfolio
+<p>
+Hello World 👋
 
-## About me
+<strong>I'm Oscar, a Web Developer passionate about Coding and Web Technologies.</strong>
 
-Hello World! 👋
+I enjoy learning and helping to build useful web applications that make a positive impact on our lives.
 
-I'm Oscar, a Junior Full-Stack Developer based in Switzerland, passionate about new technologies, coding, and languages.
-<br/>
 When I'm not online, I'm biking with friends or exploring my creativity with my camera.
+</p><br>
 
-<img src="https://media.giphy.com/media/MGdfeiKtEiEPS/giphy.gif"
-     alt="Markdown Monster icon"
-     style="max-width: 300px" />
+<strong>Skills:</strong>
+<p>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="30" height="30"/>  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="30" height="30"/>  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="30" height="30"/>  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="30" height="30"/>  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="30" height="30"/>  <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="30" height="30"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="30" height="30"/>  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="30" height="30"/>  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="30" height="30"/>
+</p><br>
 
-## About the portfolio
 
-My portfolio has three sections: About, Works, and Contact.
-For this project I use Next.js and the following dependencies:
-```
-    "react-toastify": "^9.0.4",
-    "react-tsparticles": "^2.0.6",
-    "@chakra-ui/react": "^2.1.2",
-    "@emailjs/browser": "^3.6.2",
-    "@mui/icons-material": "^5.8.2",
-    "framer-motion": "^6.3.6"
-```
-It is deployed on Vercel.
+<p><strong>My portfolio:</strong>
 
-## Demo
 [www.oscargonzalez.dev](https://www.oscargonzalez.dev)
+</p><br>
 
-## Note
-For offers, feedback or comments, feel free to connect via [LinkedIn](https://www.linkedin.com/in/oscargonzalezdev/ "Oscar Gonzalez") or [e-mail](mailto:oscargonzalezdev@gmail.com).
+<strong>Connect with me:</strong>
+<p>
+<a href="https://twitter.com/oscardev_" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="oscardev_" height="30" width="30" /></a>  <a href="https://linkedin.com/in/oscargonzalezdev" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="oscargonzalezdev" height="30" width="30" /></a>
+</p>
+<br>
+
+<strong>Support:</strong>
+<p><a href="https://www.buymeacoffee.com/oscardev"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="30" width="auto" alt="oscardev" /></a></p>
+<br><br>
