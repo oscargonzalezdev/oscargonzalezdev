@@ -3,12 +3,9 @@ import { loadFull } from "tsparticles";
 
 export default function ParticlesBackground() {
   const particlesInit = async (main) => {
-    // console.log(main);
     await loadFull(main);
   };
-
   const particlesLoaded = (container) => {
-    // console.log(container);
   };
 
   return (
@@ -19,19 +16,18 @@ export default function ParticlesBackground() {
       loaded={particlesLoaded}
       options={{
         background: {
-          color: "#EFEFEF",
+          image: "linear-gradient(#0D1821 50%, #EFEFEF 100%)",
           position: "center",
           repeat: "no-repeat",
         },
         fullScreen: {
-          enable: true,
-          zIndex: -1
+          enable: false,
         },
-        fpsLimit: 120,
+        fpsLimit: 60,
         interactivity: {
           events: {
             onClick: {
-              enable: true,
+              enable: false,
               mode: "push",
             },
             onHover: {
@@ -45,20 +41,20 @@ export default function ParticlesBackground() {
               quantity: 0,
             },
             repulse: {
-              distance: 20,
-              duration: 0.1,
+              distance: 30,
+              duration: 0.5,
             },
           },
         },
         particles: {
           color: {
-            value: "#fff",
+            value: "#ccc",
           },
           links: {
-            color: "#bebebe",
+            color: "#cacaca",
             distance: 250,
             enable: true,
-            opacity: 0.6,
+            opacity: 0.3,
             width: 2,
           },
           collisions: {
@@ -71,7 +67,7 @@ export default function ParticlesBackground() {
               default: "bounce",
             },
             random: false,
-            speed: 0.3,
+            speed: 0.2,
             straight: true,
           },
           number: {
@@ -79,16 +75,16 @@ export default function ParticlesBackground() {
               enable: true,
               area: 1000,
             },
-            value: 90,
+            value: 70,
           },
           opacity: {
-            value: 0.7,
+            value: 1,
           },
           shape: {
-            type: "square",
+            type: "circle",
           },
           size: {
-            value: { min: 1, max: 10 },
+            value: { min:0, max: 0 },
           },
         },
         detectRetina: true,

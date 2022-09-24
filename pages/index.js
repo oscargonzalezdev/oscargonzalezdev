@@ -34,7 +34,6 @@ export default function Home({ posts, works }) {
       </Head>
       <About />
       <div className='bg-container'>
-        <Stack />
         <LatestWorks data={selectedWorks} />
         <LatestPosts data={selectedPosts} />
         <Contact />

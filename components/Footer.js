@@ -1,7 +1,6 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { Button } from '@chakra-ui/react';
 import Link from 'next/link';
 
 function Footer() {
@@ -22,9 +21,7 @@ function Footer() {
                 </div>
             </div>
             <div className='flex-row flex-center madeby'>
-                <p>Made with 🤍 and <span className='emoji-coffee'>☕</span> by Oscar Gonzalez &nbsp;</p>
-                <br />
-                <a href="https://github.com/oscargonzalezdev/portfolio" target="_blank" rel="noopener noreferrer"><Button borderColor='#c1c1c1' color='#c1c1c1' _hover={{ bg: '#fff', color: '#000' }} size='xs' variant='outline' ><GitHubIcon fontSize="inherit" />&nbsp; View Code </Button></a>
+                <p>Made with 🤍 and <span className='emoji-coffee'>☕</span> by Oscar Gonzalez</p>
             </div>
         </section>
     )

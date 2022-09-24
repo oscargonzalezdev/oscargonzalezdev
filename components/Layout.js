@@ -31,7 +31,7 @@ export function NavBar() {
 }
 function Layout(props) {
   return (
-    <div>
+    <div className="layout">
       <NavBar />
       <div className="main-container">
         <main>{props.children}</main>

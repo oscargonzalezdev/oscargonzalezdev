@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Poppins&family=Roboto+Mono&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Poppins&family=Roboto+Mono&family=VT323&family=IBM+Plex+Mono&family=Press+Start+2P&display=swap');
 
 :root {
   --box-color: #ffffff;
   --box-color-opacity-90: rgba(255, 255, 255, 0.9);
-  --bg-color: #EFEFEF;
+  --bg-color: #0D1821;
   --bg-color-main-container: #f9f9f9;
   --color-primary: #ffae22;
   --dark-color: rgba(20, 20, 20, 0.94);
@@ -22,8 +22,8 @@ html {
 }
 
 html body {
-  background-color: var(--bg-color);
   font-family: 'Poppins', Helvetica Neue, sans-serif;
+  background-color: #EFEFEF;
 }
 
 body a {
@@ -32,14 +32,16 @@ body a {
 }
 
 body button {
+  background-color: var(--color-primary);
+  color: var(--bg-color);
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   text-align: center;
-  background-color: #000;
-  color: #fff;
 }
 
 body button:hover {
-  color: var(--color-primary);
+  color: #fff;
 }
 
 body h1 {
@@ -74,25 +76,29 @@ body hr {
   text-transform: uppercase;
 }
 
-/* DESKTOP MENU */
+.layout {
+  width: 80vw;
+  margin: 0 auto 20px auto;
+
+}
+
+/* NAVBAR*/
 
 header {
-  width: 100vw;
   position: fixed;
   top: 0;
-  background-color: var(--dark-color);
+  background-color: var(--bg-color);
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
   font-size: 1rem;
   z-index: 1;
   text-transform: uppercase;
-  box-shadow: 1px 1px 10px #d4d4d480;
 }
 
 .site-navbar {
-  width: 85vw;
+  width: 80vw;
   margin: auto;
-  padding: 20px;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,19 +162,9 @@ header {
   padding-top: 90px;
 }
 
-.about-buttons {
-  color: #b88e24;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.about-buttons>button {
-  margin-right: 30px;
-}
-
 .main-container {
-  width: 85vw;
-  margin: 60px auto 0 auto;
+  width: 80vw;
+  margin: auto;
 }
 
 .bg-container {
@@ -252,7 +248,7 @@ header {
 
 .full-width {
   width: 100%;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 50px);
   margin: auto;
   vertical-align: middle;
   display: flex;
@@ -260,27 +256,42 @@ header {
   justify-content: center;
 }
 
+.particles {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 140vh;
+  z-index: -1;
+}
+
 .contact-form {
   width: 70%;
 }
 
 .avatar {
-  border: 3.5px solid #000000;
+  border: 2px solid #ccc;
   margin: auto;
 }
 
 .box {
   background: var(--box-color);
   box-shadow: 2px 2px 10px #ddddddc5;
-  border-radius: 15px;
+  border-radius: 10px;
   color: #000;
   padding: 40px;
 }
 
 .about-info {
-  width: 50%;
+  color: #fff;
+  width: 60%;
+  padding: 20px;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  font-family: 'IBM Plex Mono', monospace;
 }
-
+.about-info p {
+  margin-bottom: 1rem
+}
 .emoji-hello {
   justify-content: flex-start;
 }
@@ -291,7 +302,7 @@ header {
 }
 
 .social-links a {
-  color: #000;
+  color: #fff;
   z-index: 1;
 }
 
@@ -302,8 +313,9 @@ header {
 .footer-bg {
   padding: 50px;
   margin: auto !important;
-  background-color: #222222;
+  background-color: var(--bg-color);
   color: #c1c1c1;
+  border-radius: 0 0 10px 10px;
 }
 
 .flex-center {
@@ -324,12 +336,6 @@ header {
   text-decoration: underline;
 }
 
-.particles {
-  position: absolute;
-  width: calc(100vw - 20%);
-  height: 100vh;
-}
-
 .rocket {
   position: relative;
   left: 50px;
@@ -346,19 +352,29 @@ header {
 /* MOBILE VIEW */
 @media screen and (max-width: 650px) {
 
+  .layout {
+    width: 100%;
+    margin: 0;
+  }
+
+  #about {
+    padding-top: 90px;
+  }
+
   .mobile-menu {
     display: block;
   }
 
   header {
-    flex-direction: column;
     width: 100vw;
+    flex-direction: column;
     margin: auto;
     display: flex;
     align-items: center;
   }
 
   .nav-options {
+    background-color: var(--bg-color);
     width: 100%;
     position: absolute;
     top: 65px;
@@ -371,22 +387,12 @@ header {
   }
 
   .nav-options.active {
-    background: var(--dark-color);
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
     align-content: center;
     padding: 20px;
-  }
-
-  .site-navbar {
-    width: 100vw;
-    padding: 0 40px;
-  }
-
-  .site-navbar ul a {
-    padding: 10px 0px;
   }
 
   .section-stack {
@@ -422,11 +428,6 @@ header {
 
   .flex-space-between div {
     width: 100%;
-  }
-
-  .flex-left,
-  .flex-right {
-    max-width: 90%;
   }
 
   .bg-container {
