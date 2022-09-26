@@ -61,7 +61,7 @@ function PostDetails({ post }) {
     }, [])
 
     const { title, content, image, createdAt } = post.attributes
-    const date = moment(createdAt).format("MMM Do YY");
+    const date = moment(createdAt).format('ll');
     const imgURL = image.data.attributes.url;
 
     if (!post) return (
@@ -84,7 +84,7 @@ function PostDetails({ post }) {
                             src='../images/oscargonzalez.jpg'
                             alt='Oscar Gonzalez'
                             title="Oscar Gonzalez - Web Developer"
-                            marginRight='4'
+                            marginRight='3'
                         />
                         <div className='align-left'>
                             <p><strong>Oscar Gonzalez</strong></p>

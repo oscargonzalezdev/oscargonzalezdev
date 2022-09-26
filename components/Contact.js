@@ -57,13 +57,13 @@ export default function Contact () {
     };
 
     return (
-        <section id="contact" className='full-width'>
+        <section id="contact">
             <ToastContainer position="bottom-right" />
             <div className='flex-column'>
                 <form className='contact-form' ref={form} onSubmit={sendEmail}>
                     <h1 className='text-center section-title'>Get in touch<hr /></h1>
                     <FadeInWhenVisible >
-                        <Box className='box'>
+                        <Box boxShadow='base' className='box'>
                             <VStack spacing={5}>
                                 <div className='flex-row flex-space-between'>
                                     <div>

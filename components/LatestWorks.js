@@ -23,7 +23,7 @@ export default function LatestWorks({ data }) {
         <section id="works" className="full-width">
             <h1 className="text-center section-title">Latest works<hr /></h1>
             <FadeInWhenVisible>
-                <div className="flex-row">
+                <div className="flex-row gap40">
                     {data.map((item, index) => (
                         <WorkCard
                             key={index}

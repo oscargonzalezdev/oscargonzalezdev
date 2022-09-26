@@ -16,7 +16,7 @@ export default function ParticlesBackground() {
       loaded={particlesLoaded}
       options={{
         background: {
-          image: "linear-gradient(#0D1821 50%, #EFEFEF 100%)",
+          image: "linear-gradient(#3c6e71 10%, #057985 40%, #3c6e71 80%)",
           position: "center",
           repeat: "no-repeat",
         },
@@ -28,7 +28,6 @@ export default function ParticlesBackground() {
           events: {
             onClick: {
               enable: false,
-              mode: "push",
             },
             onHover: {
               enable: true,
@@ -37,9 +36,6 @@ export default function ParticlesBackground() {
             resize: true,
           },
           modes: {
-            push: {
-              quantity: 0,
-            },
             repulse: {
               distance: 30,
               duration: 0.5,

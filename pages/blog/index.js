@@ -36,9 +36,9 @@ function Blog({ posts }) {
     })
 
     return (
-        <section id='blog' className="full-width bg-container">
+        <section id='blog' className="bg-container">
             <div className={styles.headerBlog}>
-                <h1>Oscar&apos;s Blog</h1>
+                <h1>Blog</h1>
                 <div className={styles.searchBar}>
                     <InputGroup >
                         <InputLeftElement pointerEvents='none'>
@@ -54,8 +54,7 @@ function Blog({ posts }) {
                     </InputGroup>
                 </div>
             </div>
-            <hr />
-            <div className='flex-column'>
+            <div className='flex-column full-height'>
                 {postsList.map((item, index) => (
                     <PostCard
                         key={index}

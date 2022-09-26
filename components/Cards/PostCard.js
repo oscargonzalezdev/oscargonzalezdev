@@ -11,7 +11,7 @@ export default function PostCard({ title, description, slug, imageURL, category 
                 transition: { duration: 0.3 },
             }}
         >
-            <Box boxShadow='md' className={styles.blogCard}>
+            <Box boxShadow='base' className={styles.blogCard}>
                 <Image
                     src={imageURL}
                     alt={title}

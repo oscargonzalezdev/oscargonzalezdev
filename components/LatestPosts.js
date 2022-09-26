@@ -1,11 +1,12 @@
-import axios from "axios"
 import PostCard from "./Cards/PostCard"
 import { FadeInWhenVisible } from "./LatestWorks"
 
 function LatestPosts({ data }) {
   return (
-    <section id="works" className="full-width">
-      <h1 className="text-center section-title">Latest Posts<hr /></h1>
+    <section id="posts" className="full-width">
+    <div className="flex-row section-title">
+    <h1 className="text-center">Latest Posts<hr /></h1>
+    </div>
       <FadeInWhenVisible>
         <div className="flex-column">
           {data.map((item, index) => (
@@ -17,7 +18,6 @@ function LatestPosts({ data }) {
               imageURL={item.image.data.attributes.url}
               category={item.category.data.attributes.name}
             />
-
           ))}
         </div>
       </FadeInWhenVisible>

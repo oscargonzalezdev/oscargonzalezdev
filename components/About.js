@@ -10,11 +10,11 @@ import ParticlesBackground from "./ParticlesBackground";
 function About() {
   return (
     <section id="about">
-      <div className="full-width">
+      <div className="full-height">
         <div className="flex-row">
           <ParticlesBackground />
           <div>
-            <motion.div initial={{ opacity: 0, x: "-50%" }} animate={{ opacity: 1, x: 0 }} transition={{ ease: "easeOut", duration: 1 }}>
+            <motion.div initial={{ opacity: 0, x: "-10%" }} animate={{ opacity: 1, x: 0 }} transition={{ ease: "easeOut", duration: 1 }}>
               <Image
                 className='avatar'
                 borderRadius='full'
@@ -33,18 +33,18 @@ function About() {
             </motion.div>
           </div>
           <div className="about-info">
-            <motion.div className="about-title" initial={{ opacity: 0, x: "50%" }} animate={{ opacity: 1, x: 0 }} transition={{ ease: "easeOut", duration: 1 }}>
+            <motion.div className="about-title" initial={{ opacity: 0, x: "10%" }} animate={{ opacity: 1, x: 0 }} transition={{ ease: "easeOut", duration: 1 }}>
               <article>
                 <p>
                   <span className="flex-row emoji-hello">
                     Hi there!
-                    <motion.span initial={{ x: 0, rotateZ: 0 }} animate={{ x: 30, rotateZ: 40 }} transition={{ duration: 0.3, repeat: 5, repeatType: "reverse", delay: 1.3 }}>
-                      👋
+                    <motion.span initial={{ x: 0, rotateZ: 0 }} animate={{ x: 30, rotateZ: 40 }} transition={{ duration: 0.3, repeat: 5, repeatType: "reverse", delay: 1.5 }}>
+                      <Image position='relative' top='-5px' boxSize='40px' src='/images/waving_hand_3d_medium-light.png' alt='waving hand' />
                     </motion.span>
                   </span>
                 </p>
                 <p>
-                  I&apos;m Oscar, a Web Developer and tech enthusiast passionate about the World Wide Web.
+                  I&apos;m Oscar, Web Developer and tech enthusiast passionate about the World Wide Web.
                 </p>
                 <p>
                   My mission is to help teams develop great web applications that positively impact the world.

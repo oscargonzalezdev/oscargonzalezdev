@@ -10,7 +10,6 @@ import {
     DrawerHeader,
     DrawerBody
 } from "@chakra-ui/react"
-import Link from "next/link"
 import styles from '../Cards/Card.module.css'
 import { motion } from 'framer-motion'
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -26,9 +25,9 @@ function WorkCard({ title, subtitle, description, slug, imageURL, repoURL, demoU
                     transition: { duration: 0.3 },
                 }}
             >
-                <Box boxShadow='md' className={styles.workCard}>
-                    <Image h='300px' maxW='100%' objectFit='cover' borderRadius='10px 10px 0 0' src={imageURL} alt={title} />
+                <Box boxShadow='base' className={styles.workCard}>
                     <div className={styles.workCardDescription}>
+                        <Image h='200px' w='100%' objectFit='cover' borderRadius='10px 10px 0 0' src={imageURL} alt={title} />
                         <div>
                             <h2 className="text-center"><strong>{title}</strong></h2>
                             <h3 className="text-center">{subtitle}</h3>
@@ -40,11 +39,11 @@ function WorkCard({ title, subtitle, description, slug, imageURL, repoURL, demoU
             <Drawer
                 onClose={onClose}
                 isOpen={isOpen}
-                size='full'
+                size='xl'
             >
                 <DrawerOverlay />
                 <DrawerContent className={styles.drawerContent}>
-                    <DrawerCloseButton color='#fff' zIndex={2} />
+                    <DrawerCloseButton backgroundColor='initial' color='#000' zIndex={2} />
                     <DrawerHeader className={styles.drawerHeader} color='#fff'>{title}</DrawerHeader>
                     <DrawerBody className={styles.drawerBody}>
                         <div>

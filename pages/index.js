@@ -2,9 +2,9 @@ import Head from 'next/head'
 import About from '../components/About';
 import LatestWorks from '../components/LatestWorks';
 import Contact from '../components/Contact';
-import Stack from '../components/Stack'
 import LatestPosts from '../components/LatestPosts';
 import { fetchPosts, fetchWorks } from '../utils/fetch-data';
+import { Box } from '@chakra-ui/react';
 
 // render data from server as static content
 export async function getStaticProps() {
@@ -33,11 +33,11 @@ export default function Home({ posts, works }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <About />
-      <div className='bg-container'>
-        <LatestWorks data={selectedWorks} />
+      <Box boxShadow='md' className='bg-container'>
+      <LatestWorks data={selectedWorks} />
         <LatestPosts data={selectedPosts} />
         <Contact />
-      </div>
+      </Box>
     </div>
   )
 }

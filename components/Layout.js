@@ -10,22 +10,22 @@ export function NavBar() {
   const closeMobileMenu = () => setClick(false);
 
   return (
-    <header>
-      <nav className="site-navbar">
-        <Link href='/'><span id="logo">&nbsp;</span></Link>
-        <ul className={click ? "nav-options active" : "nav-options"}>
-          <li onClick={closeMobileMenu}><Link href='/blog'>Blog</Link></li>
-          <li onClick={closeMobileMenu}><Link href='/#works'>Works</Link></li>
-          <li onClick={closeMobileMenu}><Link href='/#contact'>Contact</Link></li>
-        </ul>
-        <div className="mobile-menu" onClick={handleClick}>
-          {click ? (
-            <CloseIcon className="menu-icon" />
-          ) : (
-            <MenuIcon className="menu-icon" />
-          )}
-        </div>
-      </nav>
+    <header className="menu-header">
+        <nav className="site-navbar">
+          <Link href='/'>{'<OG/>'}</Link>
+          <ul className={click ? "nav-options active" : "nav-options"}>
+            <li onClick={closeMobileMenu}><Link href='/blog'>Blog</Link></li>
+            <li onClick={closeMobileMenu}><Link href='/#works'>Works</Link></li>
+            <li className="link-contact" onClick={closeMobileMenu}><Link href='/#contact'>Contact</Link></li>
+          </ul>
+          <div className="mobile-menu" onClick={handleClick}>
+            {click ? (
+              <CloseIcon className="menu-icon" />
+            ) : (
+              <MenuIcon className="menu-icon" />
+            )}
+          </div>
+        </nav>
     </header>
   )
 }
