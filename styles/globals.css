@@ -270,6 +270,7 @@ body hr {
 .particles {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   z-index: -1;
@@ -282,7 +283,6 @@ body hr {
 
 .avatar {
   border: 2px solid #ccc;
-  margin: auto;
 }
 
 .box {
@@ -293,20 +293,36 @@ body hr {
   padding: 40px;
 }
 
-#about {
-  padding: 0 5%;
+.about-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 20px;
+}
+
+.about-img {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
 
 .about-info {
+  width: 55%;
   color: #fff;
-  width: 60%;
   padding: 20px;
   font-size: 1.5rem;
   line-height: 1.7;
   font-family: 'IBM Plex Mono', monospace;
 }
+
 .about-info p {
   margin-bottom: 1rem
+}
+
+.about-info button {
+  text-transform: uppercase;
 }
 
 .emoji-hello {
@@ -343,9 +359,29 @@ body hr {
 }
 
 .footer-section {
-  height: 300px;
-  padding: 120px 0;
+  margin-top: 100px;
   width: 100%;
+}
+
+.footer-links {
+  line-height: 2rem;
+}
+
+.footer-links span {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.footer-links span:hover {
+  border-bottom: 2px solid #fff;
+}
+.footer-links span svg {
+  margin-right: 5px;
+}
+
+.footer-links span * {
+  font-size: 1.2rem;
+  vertical-align: text-top;
 }
 
 .madeby {
@@ -387,7 +423,11 @@ body hr {
 }
 
 /* MOBILE VIEW */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
+
+  :root {
+    font-size: 13px;
+  }
 
   .layout {
     width: 100%;
@@ -401,10 +441,6 @@ body hr {
 
   .menu-header {
     width: 100%;
-    flex-direction: column;
-    margin: auto;
-    display: flex;
-    align-items: center;
   }
 
   .menu-header::before, .menu-header::after {
@@ -450,6 +486,11 @@ body hr {
 
   .about-info {
     width: 100%;
+  }
+
+  .avatar {
+    width: 90% !important;
+    height: 90% !important;
   }
 
   #contact form, #contact .flex-space-between div {

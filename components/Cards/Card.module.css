@@ -19,21 +19,21 @@
     position: relative;
 }
 
-.drawerHeader {
-    color: #000 !important;
-    text-align: center;
-    font-size: 1.7rem !important;
-}
-
 .drawerContent {
     top: 50%;
     left: 0;
     margin: auto;
-    height: fit-content !important;
+    max-height: fit-content !important;
     min-height: 50%;
     border-radius: 10px;
     background-color: var(--box-color) !important;
     padding: 20px;
+}
+
+.drawerHeader {
+    color: #000 !important;
+    text-align: center;
+    font-size: 1.7rem !important;
 }
 
 .drawerBody {
@@ -94,7 +94,7 @@
 }
 
 /* MOBILE VIEW */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
     .workCard {
         width: 100%;
         margin: auto;
@@ -110,10 +110,6 @@
 
     .drawerBody img {
         width: 100%;
-    }
-
-    .drawerBody button {
-        display: block;
     }
 
     .blogCard {

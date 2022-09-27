@@ -2,6 +2,9 @@ import { Image } from '@chakra-ui/react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import WorkIcon from '@mui/icons-material/Work';
 import Link from 'next/link';
 import { motion } from 'framer-motion'
 
@@ -10,16 +13,14 @@ function Footer() {
         <section className='footer-section'>
             <div className="flex-row footer-links">
                 <div>
-                    <span>
-                        <a href="https://github.com/oscargonzalezdev" target="_blank" rel="noopener noreferrer" ><GitHubIcon fontSize='sm' />&nbsp; GitHub</a> <br />
-                        <a href="https://www.linkedin.com/in/oscargonzalezdev" target="_blank" rel="noopener noreferrer" ><LinkedInIcon fontSize='sm' />&nbsp; LinkedIn</a> <br />
-                        <a href="https://twitter.com/oscardev_" target="_blank" rel="noopener noreferrer" ><TwitterIcon fontSize='sm' />&nbsp; Twitter</a> <br />
-                    </span>
+                <a href="https://github.com/oscargonzalezdev" target="_blank" rel="noopener noreferrer" ><span><GitHubIcon />GitHub</span></a><br />
+                    <a href="https://www.linkedin.com/in/oscargonzalezdev" target="_blank" rel="noopener noreferrer" ><span><LinkedInIcon />LinkedIn</span></a><br />
+                    <a href="https://twitter.com/oscardev_" target="_blank" rel="noopener noreferrer" ><span><TwitterIcon />Twitter</span></a><br />
                 </div>
                 <div>
-                    <Link href='/blog'>Blog</Link><br />
-                    <Link href='/#works'>Works</Link><br />
-                    <Link href='/#contact'>Contact</Link><br />
+                    <Link href='/blog'><span><TipsAndUpdatesIcon />Blog</span></Link><br />
+                    <Link href='/#works'><span><WorkIcon />Works</span></Link><br />
+                    <Link href='/#contact'><span><AlternateEmailIcon />Contact</span></Link><br />
                 </div>
             </div>
             <div className='footer-img'>
@@ -30,8 +31,8 @@ function Footer() {
                     viewport={{ once: true }}
                     transition={{ duration: 2 }}
                     variants={{
-                        visible: { opacity: 1, y: '-108%' },
-                        hidden: { opacity: 0, y: 100 }
+                        visible: { opacity: 1, y: '-110%' },
+                        hidden: { opacity: 0, y: 50 }
                     }}>
                     <Image className='rocket-img' height='100px' src="../images/rocket-3d.png" alt="rocket" />
                     <div className='madeby'>

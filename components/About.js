@@ -11,14 +11,14 @@ function About() {
   return (
     <section id="about">
       <div className="full-height">
-        <div className="flex-row">
-          <ParticlesBackground />
-          <div>
+        <ParticlesBackground />
+        <div className="about-container">
+          <div className="about-img">
             <motion.div initial={{ opacity: 0, x: "-10%" }} animate={{ opacity: 1, x: 0 }} transition={{ ease: "easeOut", duration: 1 }}>
               <Image
                 className='avatar'
                 borderRadius='full'
-                boxSize='250px'
+                boxSize='230px'
                 src='../images/oscargonzalez.jpg'
                 alt='Oscar Gonzalez'
                 title="Oscar Gonzalez - Web Developer"
@@ -29,7 +29,6 @@ function About() {
                 <a href="https://www.linkedin.com/in/oscargonzalezdev" target="_blank" rel="noopener noreferrer" ><LinkedInIcon sx={{ fontSize: 25 }} /></a>
                 <a href="https://twitter.com/oscardev_" target="_blank" rel="noopener noreferrer" ><TwitterIcon sx={{ fontSize: 25 }} /></a>
               </span>
-              <br />
             </motion.div>
           </div>
           <div className="about-info">
@@ -51,12 +50,11 @@ function About() {
                 </p>
               </article>
               <div className="about-buttons">
-                <Link href='#works'><Button variant='none'><KeyboardDoubleArrowDownIcon />Find out more</Button></Link>
+                <Link href='#works'><Button variant='none'>Find out more<KeyboardDoubleArrowDownIcon /></Button></Link>
               </div>
             </motion.div>
           </div>
         </div>
-        <br />
       </div>
     </section>
   )
