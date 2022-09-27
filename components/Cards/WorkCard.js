@@ -41,7 +41,6 @@ function WorkCard({ title, subtitle, description, slug, imageURL, repoURL, demoU
                 onClose={onClose}
                 isOpen={isOpen}
                 size='xl'
-                blockScrollOnMount={false}
             >
                 <DrawerOverlay />
                 <DrawerContent className={styles.drawerContent}>

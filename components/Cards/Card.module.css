@@ -103,7 +103,11 @@
     .cardDescription {
         border-radius: 10px;
     }
-    
+
+    .drawerContent {
+        max-height: 90% !important;
+    }
+
     .drawerBody {
         flex-direction: column-reverse;
     }
