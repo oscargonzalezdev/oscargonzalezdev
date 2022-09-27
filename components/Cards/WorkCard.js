@@ -8,7 +8,8 @@ import {
     DrawerContent,
     DrawerCloseButton,
     DrawerHeader,
-    DrawerBody
+    DrawerBody,
+    DrawerFooter
 } from "@chakra-ui/react"
 import styles from '../Cards/Card.module.css'
 import { motion } from 'framer-motion'
@@ -40,21 +41,20 @@ function WorkCard({ title, subtitle, description, slug, imageURL, repoURL, demoU
                 onClose={onClose}
                 isOpen={isOpen}
                 size='xl'
+                blockScrollOnMount={false}
             >
                 <DrawerOverlay />
                 <DrawerContent className={styles.drawerContent}>
                     <DrawerCloseButton backgroundColor='initial' color='#000' zIndex={2} />
                     <DrawerHeader className={styles.drawerHeader} color='#fff'>{title}</DrawerHeader>
                     <DrawerBody className={styles.drawerBody}>
-                        <div>
                             <p>{description}</p>
-                            <div className="flex-row">
-                                <a href={repoURL} target="_blank" rel="noopener noreferrer"><Button variant='none'><GitHubIcon fontSize="inherit" />&nbsp;Code </Button></a>
-                                <a href={demoURL} target="_blank" rel="noopener noreferrer"><Button variant='none' ><PreviewIcon fontSize="inherit" />&nbsp;Demo </Button></a>
-                            </div>
-                        </div>
                         <Image objectFit='contain' borderRadius='10px' src={imageURL} alt={subtitle} />
                     </DrawerBody>
+                    <DrawerFooter className="flex-row">
+                        <a href={repoURL} target="_blank" rel="noopener noreferrer"><Button variant='none'><GitHubIcon fontSize="inherit" />Code </Button></a>
+                        <a href={demoURL} target="_blank" rel="noopener noreferrer"><Button variant='none' ><PreviewIcon fontSize="inherit" />Demo </Button></a>
+                    </DrawerFooter>
                 </DrawerContent>
             </Drawer>
         </>
