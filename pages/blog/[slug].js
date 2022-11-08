@@ -1,5 +1,5 @@
 import { Image } from '@chakra-ui/react'
-import styles from '../../styles/Blog.module.css'
+import styles from './Blog.module.css'
 import moment from 'moment'
 import { fetchPosts } from '../../utils/fetch-data'
 import ReactMarkdown from 'react-markdown'
@@ -69,7 +69,7 @@ function PostDetails({ post }) {
     )
 
     return (
-        <div className="full-width bg-container">
+        <div className={styles.postContainer}>
             <div className={styles.containerTitle}
                 style={{ backgroundImage: `url(${imgURL})` }}
             >
@@ -93,7 +93,6 @@ function PostDetails({ post }) {
                     </div>
                 </div>
             </div>
-            <br />
             <article>
                 <ReactMarkdown className={styles.postContent}>{content}</ReactMarkdown>
             </article>
