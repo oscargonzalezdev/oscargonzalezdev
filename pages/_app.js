@@ -1,16 +1,16 @@
-import '../styles/globals.css'
-import Layout from '../components/Layout'
+import './globals.css'
+import Layout from '../components/Layout/Layout'
 import { ChakraProvider } from '@chakra-ui/react'
-import { AuthContextProvider } from '../context/AuthContext'
+import { DataContextProvider } from '../context/DataContext'
 
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
-      <AuthContextProvider>
+      <DataContextProvider>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </AuthContextProvider>
+      </DataContextProvider>
     </ChakraProvider>
   )
 }
