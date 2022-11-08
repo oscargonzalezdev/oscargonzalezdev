@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Footer from "../Footer"
+import Footer from "../Layout/Footer"
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from "react";
@@ -33,7 +33,7 @@ export function NavBar() {
 function Layout(props) {
   return (
     <div className="layout">
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="main-container">
         <main>{props.children}</main>
       </div>
