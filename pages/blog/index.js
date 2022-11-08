@@ -1,5 +1,5 @@
 import PostCard from '../../components/Cards/PostCard'
-import styles from '../../styles/Blog.module.css'
+import styles from './Blog.module.css'
 import { useState } from 'react'
 import { SearchIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
@@ -36,7 +36,7 @@ function Blog({ posts }) {
     })
 
     return (
-        <section id='blog' className="bg-container">
+        <section id='blog'>
             <div className={styles.headerBlog}>
                 <h1>Blog</h1>
                 <div className={styles.searchBar}>
