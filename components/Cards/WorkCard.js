@@ -22,19 +22,19 @@ function WorkCard({ title, subtitle, description, slug, imageURL, repoURL, demoU
         <>
             <motion.div
                 whileHover={{
-                    scale: 1.03,
+                    scale: 1.05,
                     transition: { duration: 0.3 },
                 }}
             >
-                <Box boxShadow='base' className={styles.workCard}>
-                    <div className={styles.workCardDescription}>
-                        <Image h='200px' w='100%' objectFit='cover' borderRadius='10px 10px 0 0' src={imageURL} alt={title} />
-                        <div>
-                            <h2 className="text-center"><strong>{title}</strong></h2>
-                            <h3 className="text-center">{subtitle}</h3>
-                        </div>
-                        <Button variant='none' onClick={onOpen}>More Details</Button>
-                    </div>
+                <Box
+                    onClick={onOpen}
+                    className={styles.workCard}
+                >
+                    <Image h='100px' w='100%' objectFit='cover' src={imageURL} alt={title} />
+                    <Box marginTop='20px'>
+                        <h3><strong>{title}</strong></h3>
+                        <p>{subtitle}</p>
+                    </Box>
                 </Box>
             </motion.div>
             <Drawer
@@ -44,13 +44,13 @@ function WorkCard({ title, subtitle, description, slug, imageURL, repoURL, demoU
             >
                 <DrawerOverlay />
                 <DrawerContent className={styles.drawerContent}>
-                    <DrawerCloseButton backgroundColor='initial' color='#000' zIndex={2} />
-                    <DrawerHeader className={styles.drawerHeader} color='#fff'>{title}</DrawerHeader>
+                    <DrawerCloseButton backgroundColor='initial' color='#ccc' zIndex={2} />
+                    <DrawerHeader className="text-center"><h1>{title}</h1></DrawerHeader>
                     <DrawerBody className={styles.drawerBody}>
-                            <p>{description}</p>
-                        <Image objectFit='contain' borderRadius='10px' src={imageURL} alt={subtitle} />
+                        <p>{description}</p>
+                        <Image src={imageURL} alt={subtitle} />
                     </DrawerBody>
-                    <DrawerFooter className="flex-row">
+                    <DrawerFooter className={styles.drawerFooter}>
                         <a href={repoURL} target="_blank" rel="noopener noreferrer"><Button variant='none'><GitHubIcon fontSize="inherit" />Code </Button></a>
                         <a href={demoURL} target="_blank" rel="noopener noreferrer"><Button variant='none' ><PreviewIcon fontSize="inherit" />Demo </Button></a>
                     </DrawerFooter>

@@ -1,32 +1,32 @@
-import { Button, Image, Box } from "@chakra-ui/react"
+import { Image } from "@chakra-ui/react"
 import Link from "next/link"
 import styles from '../Cards/Card.module.css'
 import { motion } from 'framer-motion'
 
-export default function PostCard({ title, description, slug, imageURL, category }) {
+export default function PostCard({ title, description, slug, imageURL, category, date }) {
     return (
         <motion.div
             whileHover={{
-                scale: 1.03,
+                scale: 1.05,
                 transition: { duration: 0.3 },
             }}
         >
-            <Box boxShadow='base' className={styles.blogCard}>
-                <Image
-                    src={imageURL}
-                    alt={title}
-                    objectFit='cover'
-                    borderRadius='10px'
-                />
-                <div className={styles.blogCardDescription}>
-                    <div className={styles.blogCardHeader}>
-                        <p >{category}</p>
+            <Link href={'/blog/' + slug}>
+                <div className={styles.blogCard}>
+                    <Image
+                        src={imageURL}
+                        alt={title}
+                    />
+                    <div className={styles.blogCardDescription}>
+                        <div className="flex-row flex-space-between">
+                            <p>{category}</p>
+                            <p>{date}</p>
+                        </div>
                         <h2><strong>{title}</strong></h2>
+                        <p>{description}</p>
                     </div>
-                    <p>{description}</p>
-                    <Link href={'/blog/' + slug}><Button variant='none' >Read Article</Button></Link>
                 </div>
-            </Box>
+            </Link>
         </motion.div>
     )
 }
