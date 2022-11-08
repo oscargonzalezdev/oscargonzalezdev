@@ -1,18 +1,17 @@
 import Head from 'next/head'
-import About from '../components/About';
-import LatestWorks from '../components/LatestWorks';
-import Contact from '../components/Contact';
-import LatestPosts from '../components/LatestPosts';
+import About from '../components/About/About';
+import LatestWorks from '../components/Works/LatestWorks';
+import Contact from '../components/Contact/Contact';
+import LatestPosts from '../components/Posts/LatestPosts.js'
 import { fetchPosts, fetchWorks } from '../utils/fetch-data';
-import { Box } from '@chakra-ui/react';
 
 // render data from server as static content
 export async function getStaticProps() {
   const posts = await fetchPosts()
   const works = await fetchWorks()
-    return {
-      props: { posts, works }
-    }
+  return {
+    props: { posts, works }
+  }
 }
 
 export default function Home({ posts, works }) {
@@ -32,12 +31,16 @@ export default function Home({ posts, works }) {
         <meta name="description" content="Oscar Gonzalez's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <About />
-      <Box boxShadow='md' className='bg-container'>
-      <LatestWorks data={selectedWorks} />
-        <LatestPosts data={selectedPosts} />
-        <Contact />
-      </Box>
+      <div className='grid-container'>
+        <div>
+          <About />
+        </div>
+        <div className='content'>
+          <LatestWorks data={selectedWorks} />
+          <LatestPosts data={selectedPosts} />
+          <Contact />
+        </div>
+      </div>
     </div>
   )
 }
