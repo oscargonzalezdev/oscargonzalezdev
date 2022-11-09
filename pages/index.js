@@ -16,17 +16,13 @@ export async function getStaticProps() {
 
 export default function Home({ posts, works }) {
 
-  if (posts) {
-    const selectedPosts = posts.data.map(post => {
-      return post.attributes
-    })
-  }
+  const selectedPosts = posts.data.map(post => {
+    return post.attributes
+  })
 
-  if (works) {
-    const selectedWorks = works.data.map(works => {
-      return works.attributes
-    })
-  }
+  const selectedWorks = works.data.map(works => {
+    return works.attributes
+  })
 
   return (
     <div>
