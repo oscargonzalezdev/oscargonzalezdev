@@ -24,6 +24,7 @@
     flex-direction: column;
     gap: 10px;
 }
+
 .workCard {
     background: var(--bg-card);
     border-radius: 7px;
@@ -43,7 +44,7 @@
     height: fit-content;
     min-height: 60%;
     border-radius: 10px;
-    background-color: var(--bg-card);
+    background-color: var(--bg-card) !important;
     padding: 20px;
 }
 
