@@ -36,8 +36,8 @@ export default function Home({ posts, works }) {
           <About />
         </div>
         <div className='content'>
-          {selectedPosts ? <LatestPosts data={selectedPosts} /> : null}
           {selectedWorks ? <LatestWorks data={selectedWorks} /> : null}
+          {selectedPosts ? <LatestPosts data={selectedPosts} /> : null}
           <Contact />
         </div>
       </div>

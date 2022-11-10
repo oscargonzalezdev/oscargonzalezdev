@@ -1,5 +1,5 @@
-const postEndPoint = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/articles?populate=*'
-const worksEndPoint = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/works?populate=*'
+const postEndPoint = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*`
+const worksEndPoint = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/works?populate=*`
 
 export async function fetchPosts() {
   // Call an external API endpoint to get posts
