@@ -60,7 +60,7 @@ function PostDetails({ post }) {
         renderCopyButton()
     }, [])
 
-    const { title, content, image, createdAt } = post.attributes
+    const { title, content, image, createdAt, category } = post.attributes
     const date = moment(createdAt).format('ll');
     const imgURL = image.data.attributes.url;
 
@@ -74,20 +74,20 @@ function PostDetails({ post }) {
                 style={{ backgroundImage: `url(${imgURL})` }}
             >
                 <div className={styles.titlePost}>
-                    <p className='text-uppercase'>{post.category}</p>
+                    <p className='text-uppercase category'>{category.data.attributes.name}</p>
                     <h1>{title}</h1>
                     <div className='flex-row align-center author'>
                         <Image
                             borderRadius='full'
                             boxSize='50px'
-                            border="2px"
+                            border="1px"
                             src='../images/oscargonzalez.jpg'
                             alt='Oscar Gonzalez'
                             title="Oscar Gonzalez - Web Developer"
                             marginRight='3'
                         />
                         <div className='align-left'>
-                            <p><strong>Oscar Gonzalez</strong></p>
+                            <p>Oscar Gonzalez</p>
                             <p>{date}</p>
                         </div>
                     </div>
