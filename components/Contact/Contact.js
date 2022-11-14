@@ -6,7 +6,7 @@ import {
     Input,
     Textarea,
 } from '@chakra-ui/react';
-import { FadeInWhenVisible } from '../Works/LatestWorks';
+import FadeInWhenVisible from '../Aminations/FadeInWhenVisible';
 import { useRef, useState, useContext, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
@@ -67,9 +67,9 @@ export default function Contact() {
     return (
         <section id="contact">
             <ToastContainer position="bottom-right" />
-            <h3 className='section-title'>Get in touch<hr /></h3>
-            <form className={`${styles.form} box`} ref={form} onSubmit={sendEmail}>
-                <FadeInWhenVisible >
+            <h3 className='section-title'>Get in touch</h3>
+            <FadeInWhenVisible >
+                <form className={`${styles.form} box`} ref={form} onSubmit={sendEmail}>
                     <div className='flex-row flex-space-between'>
                         <div>
                             <FormControl isRequired>
@@ -116,8 +116,8 @@ export default function Contact() {
                     >
                         Send Message
                     </Button>
-                </FadeInWhenVisible>
-            </form>
+                </form>
+            </FadeInWhenVisible>
         </section>
     );
 }

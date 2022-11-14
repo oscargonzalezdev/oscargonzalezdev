@@ -1,4 +1,5 @@
-.form > div {
+.form {
+    background-color: var(--color-dark);
     display: flex;
     flex-direction: column;
     gap: 20px;
