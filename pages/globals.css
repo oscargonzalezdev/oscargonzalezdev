@@ -2,31 +2,27 @@
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: #2f3434;
+  background-color: #a7aaaa;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px var(--bg-card);
+  box-shadow: inset 0 0 6px var(--color-dark-opacity);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  box-shadow: inset 0 0 6px var(--bg-card);
-  background-color: var(--bg-card);
+  box-shadow: inset 0 0 6px var(--color-dark-opacity);
+  background-color: var(--color-dark-opacity);
 }
 
 :root {
-  --default-padding: 40px;
-  --default-color: #ffffff;
-  --bg-card: #0f1717;
-  --bg-card-hover: #000000;
-  --bg-card-opacity-90: #0f1717ea;
-  --bg-color: #232828;
-  --bg-color-opacity: #0d1821f1;
-  --bg-color-main-container: #ffffff80;
-  --color-primary: #ffae22;
-  --dark-color: rgba(20, 20, 20, 0.94);
-  --dark-color-opacity: rgba(20, 20, 20, 0.588);
+  --color-primary: #e69b24;
+  --color-secondary: #06565c;
+  --color-light: #ffffff;
+  --color-light-opacity: #ffffff7a;
+  --color-dark: #141515;
+  --color-dark-opacity: #1a1b1c7a;
+  --padding-default: 40px;
   font-size: 15px;
 }
 
@@ -43,10 +39,11 @@ html {
 
 html body {
   font-family: 'Poppins', Helvetica Neue, sans-serif;
-  /* background-color: var(--bg-color); */
-  /* background-image: linear-gradient(90deg, #1f2323 0% 40%, #292725 50% 85%, #1f2323 95% 100%); */
-  background-image: linear-gradient(90deg, #1f2323 0%, #2f3434 100%);
-  color: var(--default-color);
+  background:
+    radial-gradient(ellipse at right top, #3a5e5ec4, transparent),
+    radial-gradient(ellipse at left bottom, #644e3ac4, transparent),
+    linear-gradient(0deg, #000000 0%, #000000 100%);
+  color: var(--color-light);
 }
 
 body a {
@@ -55,13 +52,15 @@ body a {
 
 body button {
   background-color: var(--color-primary);
-  color: #013b41;
+  color: var(--color-dark);
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   text-align: center;
   font-family: 'IBM Plex Mono', monospace;
 }
+
+
 
 body button:hover {
   color: #fff;
@@ -72,7 +71,7 @@ body h1 {
 }
 
 body h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 body h3 {
@@ -221,9 +220,10 @@ body hr {
 }
 
 .box {
-  background: var(--bg-card);
+  background: var(--color-dark-opacity);
   border-radius: 7px;
-  padding: var(--default-padding);
+  padding: var(--padding-default);
+  box-shadow: 0 0 2px var(--color-light-opacity);
 }
 
 #about {
@@ -251,13 +251,23 @@ body hr {
   font-weight: 500;
 }
 
-.social-links a {
+.social-links > a {
   color: #fff;
   z-index: 1;
+  border: 1px solid rgba(79, 79, 79, 0.512);
+  border-radius: 4px;
+  padding: 7px;
+  display: flex;
+  background-color: var(--color-dark-opacity);
+}
+
+.social-links > a > svg {
+  font-size: 1.4rem;
 }
 
 .social-links a:hover {
   color: var(--color-primary);
+  background-color: var(--color-dark);
 }
 
 .footer-img {
@@ -328,8 +338,8 @@ body hr {
   text-decoration: underline;
 }
 
-.author {
-  font-size: 1rem;
+.author, .category {
+  font-weight: 500;
 }
 
 .mobile-menu {
@@ -340,7 +350,9 @@ body hr {
   gap: 40px;
 }
 
-#works, #blog, #contact {
+#works,
+#blog,
+#contact {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -358,10 +370,12 @@ body hr {
 
   :root {
     font-size: 13px;
-    --default-padding: 30px;
+    --padding-default: 30px;
   }
 
-  #works, #blog, #contact {
+  #works,
+  #blog,
+  #contact {
     height: fit-content;
     margin: 0 auto 60px auto;
   }
@@ -397,7 +411,7 @@ body hr {
     gap: 20px;
     padding: 30px;
     align-content: center;
-    background-color: var(--bg-color);
+    background-color: var(--color-dark);
   }
 
   .nav-options.active {
