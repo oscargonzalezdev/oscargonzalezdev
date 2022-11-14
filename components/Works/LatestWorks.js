@@ -1,26 +1,10 @@
 import styles from './Works.module.css'
 import { Grid, GridItem } from "@chakra-ui/react";
-import { motion, useInView, } from "framer-motion";
+import { useInView } from "framer-motion";
 import WorkCard from "../Cards/WorkCard";
 import { useContext, useRef, useEffect } from 'react';
 import { DataContext } from '../../context/DataContext';
-
-export function FadeInWhenVisible({ children }) {
-    return (
-        <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            variants={{
-                visible: { y: 0, opacity: 1 },
-                hidden: { y: 100, opacity: 0 }
-            }}
-        >
-            {children}
-        </motion.div>
-    );
-}
+import FadeInWhenVisible from '../Aminations/FadeInWhenVisible.js'
 
 export default function LatestWorks({ data }) {
     const sortedData = data.sort(function(a,b){
@@ -37,7 +21,7 @@ export default function LatestWorks({ data }) {
 
     return (
         <section id="works">
-            <h3 className="section-title">Latest Works<hr /></h3>
+            <h3 className="section-title">Latest Works</h3>
             <FadeInWhenVisible>
                 <Grid ref={worksRef} className={styles.mainGrid}>
                     {

@@ -3,7 +3,7 @@ import moment from "moment";
 import { useRef, useContext, useEffect } from "react";
 import { DataContext } from "../../context/DataContext";
 import PostCard from "../Cards/PostCard"
-import { FadeInWhenVisible } from "../Works/LatestWorks"
+import FadeInWhenVisible from "../Aminations/FadeInWhenVisible"
 
 function LatestPosts({ data }) {
 
@@ -19,7 +19,7 @@ function LatestPosts({ data }) {
 
   return (
     <section id="blog">
-      <h3 className='section-title'>Latest Posts<hr /></h3>
+      <h3 className='section-title'>Latest Posts</h3>
       <FadeInWhenVisible>
         <div ref={postsRef}>
           {data.map((item, index) => (
