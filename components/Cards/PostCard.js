@@ -2,15 +2,12 @@ import { Image } from "@chakra-ui/react"
 import Link from "next/link"
 import styles from '../Cards/Card.module.css'
 import { motion } from 'framer-motion'
+import whileHover from '../Aminations/WhileHover'
+import WhileHover from "../Aminations/WhileHover"
 
 export default function PostCard({ title, description, slug, imageURL, category, date }) {
     return (
-        <motion.div
-            whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.3 },
-            }}
-        >
+        <WhileHover >
             <Link href={'/blog/' + slug}>
                 <div className={styles.blogCard}>
                     <Image
@@ -27,6 +24,6 @@ export default function PostCard({ title, description, slug, imageURL, category,
                     </div>
                 </div>
             </Link>
-        </motion.div>
+        </WhileHover>
     )
 }

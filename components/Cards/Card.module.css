@@ -1,9 +1,6 @@
 /* Cards */
 
 .blogCard {
-    background: var(--bg-card);
-    border-radius: 7px;
-    padding: var(--default-padding);
     height: fit-content;
     cursor: pointer;
     display: flex;
@@ -25,16 +22,6 @@
     gap: 10px;
 }
 
-.workCard {
-    background: var(--bg-card);
-    border-radius: 7px;
-    padding: var(--default-padding);
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
 /* Drawer */
 
 .drawerContent {
@@ -44,7 +31,7 @@
     height: fit-content;
     min-height: 60%;
     border-radius: 10px;
-    background-color: var(--bg-card) !important;
+    background-color: var(--color-dark) !important;
     padding: 20px;
 }
 

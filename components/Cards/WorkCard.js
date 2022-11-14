@@ -15,28 +15,21 @@ import styles from '../Cards/Card.module.css'
 import { motion } from 'framer-motion'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PreviewIcon from '@mui/icons-material/Preview';
+import WhileHover from '../Aminations/WhileHover'
 
-function WorkCard({ title, subtitle, description, slug, imageURL, repoURL, demoURL }) {
+function WorkCard({ title, subtitle, description, imageURL, repoURL, demoURL }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
-            <motion.div
-                whileHover={{
-                    scale: 1.05,
-                    transition: { duration: 0.3 },
-                }}
-            >
-                <Box
-                    onClick={onOpen}
-                    className={styles.workCard}
-                >
+            <WhileHover >
+                <Box onClick={onOpen}>
                     <Image h='100px' w='100%' objectFit='cover' src={imageURL} alt={title} />
                     <Box marginTop='20px'>
                         <h3><strong>{title}</strong></h3>
                         <p>{subtitle}</p>
                     </Box>
                 </Box>
-            </motion.div>
+            </WhileHover>
             <Drawer
                 onClose={onClose}
                 isOpen={isOpen}
