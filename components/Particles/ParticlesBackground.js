@@ -33,14 +33,14 @@ export default function ParticlesBackground() {
         particles: {
           color: {
             value: "#cacaca",
-            opacity: 0,
+            opacity: 1,
           },
           links: {
-            color: "#ccc",
+            color: "#a7aaaa",
             distance: 200,
             enable: true,
             opacity: 0.4,
-            width: 2.1,
+            width: 2.2,
           },
           collisions: {
             enable: true,
@@ -51,8 +51,8 @@ export default function ParticlesBackground() {
             outModes: {
               default: "bounce",
             },
-            random: false,
-            speed: 0.2,
+            random: true,
+            speed: 0.4,
             straight: false,
           },
           number: {
@@ -63,7 +63,7 @@ export default function ParticlesBackground() {
             value: 70,
           },
           opacity: {
-            value: 0.4,
+            value: 0.5,
           },
           shape: {
             type: "circle",
