@@ -27,7 +27,7 @@ export default function Home({ posts, works }) {
   return (
     <div>
       <Head>
-        <title>Oscar Gonzalez - Full-Stack Developer</title>
+        <title>Oscar Gonzalez - Web Developer</title>
         <meta name="description" content="Oscar Gonzalez's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
