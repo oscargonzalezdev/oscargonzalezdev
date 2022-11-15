@@ -12,8 +12,9 @@ export function NavBar() {
 
   return (
     <header className={styles.header}>
-      <Link href='/'>{'<OG/>'}</Link>
-      <nav className="site-navbar">
+    <div className={styles.bgHeader}></div>
+      <Link href='/'>{'oscarweb.dev'}</Link>
+      <nav >
         <ul className={click ? "nav-options active" : "nav-options"}>
           <li onClick={closeMobileMenu}><Link href='/blog'>Blog</Link></li>
           <li onClick={closeMobileMenu}><Link href='/#works'>Works</Link></li>
@@ -33,7 +34,7 @@ export function NavBar() {
 function Layout(props) {
   return (
     <div className="layout">
-      {/* <NavBar /> */}
+      <NavBar />
       <div className="main-container">
         <main>{props.children}</main>
       </div>

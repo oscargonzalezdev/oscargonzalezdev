@@ -1,23 +1,37 @@
+.bgHeader {
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+  background: var(--color-dark-opacity);
+  border-radius: 7px;
+  box-shadow: 1px 1px 2px var(--color-dark);
+}
+
 .header {
     height: 70px;
-    padding: 10px 60px;
+    width: 100%;
+    margin: auto;
+    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--bg-color);
     position: sticky;
     top: 0;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    font-size: 1rem;
     text-transform: uppercase;
+    font-weight: 500;
     z-index: 1;
   }
   
   .header > a {
-    font-family: 'Nabla', cursive;
-    text-shadow: 0 0 2px #000000;
-    font-size: 2.2rem;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
+    background: linear-gradient(to right, var(--color-primary) 0%, #ff8a00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Fredoka One', Helvetica Neue, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: lowercase;
   }
