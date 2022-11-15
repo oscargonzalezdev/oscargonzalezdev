@@ -2,17 +2,19 @@
   width: max-content;
 }
 
+.aboutHeader>* {
+  text-shadow: 0 0 1px var(--color-light), 1px 1px 2px var(--color-dark);
+}
+
 .aboutHeader h1 {
-  font-size: 2.3rem;
-  font-weight: 700;
-  text-shadow: 1px 1px 3px var(--color-dark);
-  color: var(--color-primary);
+  color: beige;
+  font-weight: 600;
+  font-size: 2rem;
 }
 
 .aboutHeader h2 {
-  font-weight: 700;
-  color: var(--color-light);
-  text-shadow: 0 0 2px var(--color-secondary);
+  font-weight: 500;
+  color: beige;
 }
 
 .description {
@@ -56,6 +58,7 @@
   font-size: 1.1rem;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px var(--color-dark);
+  color: beige;
 }
 
 .links li {
@@ -83,7 +86,7 @@
 /* MOBILE VIEW */
 @media screen and (max-width: 900px) {
 
-  .description{
+  .description {
     max-width: 500px;
   }
 
