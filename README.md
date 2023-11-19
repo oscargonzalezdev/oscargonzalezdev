@@ -1,7 +1,7 @@
 Hi there 👋,
 
-I'm Oscar, a passionate Software Developer and tech enthusiast.
-I love building web applications that bring ideas to life and make a positive impact.
+I'm Oscar, a passionate Software Developer and tech enthusiast.<br/>
+I love building web applications that bring ideas to life and make a positive impact.<br/>
 When I'm not coding, I like to explore new places, capture moments through photography, and spend quality time with my loved ones.
 
 <br/>
