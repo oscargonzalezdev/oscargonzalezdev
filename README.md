@@ -1,12 +1,8 @@
 Hi there 👋,
 
-I'm Oscar, a Web Developer and tech enthusiast passionate about the World Wide Web.
-
-I enjoy learning about new web technologies and helping to build web applications that make a positive impact on our lives.
-
-I also like to attend tech meetups and contribute to open-source projects.
-
-My motto is: the desire to learn is the desire to live.
+I'm Oscar, a passionate Software Developer and tech enthusiast.
+I love building web applications that bring ideas to life and make a positive impact.
+When I'm not coding, I like to explore new places, capture moments through photography, and spend quality time with my loved ones.
 
 <br/>
 
